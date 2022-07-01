@@ -1,0 +1,51 @@
+.bar-menu
+{
+    width: 90%;
+    background-color: #007878;
+    margin: 0 auto;
+    margin-top: 4%;
+    padding: 15px;
+    border-radius: 15px;
+}
+.bar-menu .acueil-ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    margin: 0 auto;
+}
+.bar-menu .acueil-ul li
+{
+    list-style: none;
+}
+.bar-menu .acueil-ul li a
+{
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffff;
+}
+.intro-section 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.intro-section .citation p
+{
+    font-size: 25px;
+    font-family: Baskervville;
+    padding: 25px;
+}
+.intro-section .logo-img img
+{
+    width: 65%;
+    padding-top: 7%;
+}
+.intro-section .logo-img img:hover
+{
+    width: 60%;
+    transition: 2s;
+}
