@@ -32,12 +32,15 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+    margin-top: 0px;
 }
 .intro-section .citation p
 {
     font-size: 25px;
     font-family: Baskervville;
     padding: 25px;
+    margin-top: 16%;
+    line-height: 42px;
 }
 .intro-section .logo-img img
 {
