@@ -7,14 +7,16 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
-import { CardsComponent } from './components/cards/cards.component'
+import { CardsComponent } from './components/cards/cards.component';
+import { EvenementCardComponent } from './components/evenement-card/evenement-card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     NavbarComponent,
-    CardsComponent
+    CardsComponent,
+    EvenementCardComponent
   ],
   imports: [
     BrowserModule,
