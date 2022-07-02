@@ -1,0 +1,22 @@
+<div class="section-racourci">
+    <div class="desc-section"  *ngFor="let dataSections of getData">
+        <h3>{{dataSections.title}}</h3>
+        <p>
+            {{dataSections.content}}
+        </p>
+        <button>
+            {{dataSections.link}}
+        </button>
+    </div>
+    <div class="btns-section">
+        <div class="d-formateur" (click)="showDemande()">
+            <h4>devenir formateur</h4>
+        </div>
+        <div class="d-formateur" (click)="showAccesEspace()">
+            <h4>acceder a mon espace</h4>
+        </div>
+        <div class="d-formateur" (click)="showEvenement()">
+            <h4>partager evenement</h4>
+        </div>
+    </div>
+</div>

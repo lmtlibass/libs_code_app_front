@@ -8,7 +8,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import { CardsComponent } from './components/cards/cards.component';
-import { EvenementCardComponent } from './components/evenement-card/evenement-card.component'
+import { EvenementCardComponent } from './components/evenement-card/evenement-card.component';
+import { RacourciComponent } from './components/racourci/racourci.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EvenementCardComponent } from './components/evenement-card/evenement-ca
     AccueilComponent,
     NavbarComponent,
     CardsComponent,
-    EvenementCardComponent
+    EvenementCardComponent,
+    RacourciComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

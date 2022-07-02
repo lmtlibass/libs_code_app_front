@@ -1,0 +1,70 @@
+.section-racourci
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 7%;
+}
+.desc-section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    text-align: justify;
+    text-justify: auto;
+    height: 250px;
+}
+.desc-section h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #007878;
+}
+.desc-section p
+{
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+.desc-section button
+{
+    background-color: #007878;
+    background: linear-gradient(90deg, rgba(0,120,120,0.8552463221616772) 16%,  rgba(100, 0, 90, 0.783) 100%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btns-section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.d-formateur
+{
+    width: 250px;
+    background-color: #ffff;
+    border: 1px solid #007878;
+    border-radius: 2px;
+    padding: 7%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    text-align: center;
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+.d-formateur h4
+{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #007878;
+    margin: auto;
+}
