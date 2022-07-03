@@ -9,13 +9,13 @@
         </button>
     </div>
     <div class="btns-section">
-        <div class="d-formateur" (click)="showDemande()">
+        <div class="d-formateur" (click)="showDemande()" [ngClass]="active1">
             <h4>devenir formateur</h4>
         </div>
-        <div class="d-formateur" (click)="showAccesEspace()">
+        <div class="d-formateur" (click)="showAccesEspace()" [ngClass]='active2'>
             <h4>acceder a mon espace</h4>
         </div>
-        <div class="d-formateur" (click)="showEvenement()">
+        <div class="d-formateur" (click)="showEvenement()" [ngClass]='active3'>
             <h4>partager evenement</h4>
         </div>
     </div>

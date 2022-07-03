@@ -1,3 +1,4 @@
+import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -25,6 +26,10 @@ export class RacourciComponent implements OnInit {
 
   getData: any;
 
+  active1 = '';
+  active2 = '';
+  active3 = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -33,17 +38,26 @@ export class RacourciComponent implements OnInit {
 
   showDemande(){
     const data = this.formation;
+    this.active3 = '';
+    this.active2 = '';
+    this.active1 = 'active-rac';
     return this.getData = data;
     
   }
 
   showAccesEspace(){
     const data = this.espace;
+    this.active3 = '';
+    this.active1 = '';
+    this.active2 = 'active-rac';
     return this.getData = data;
   }
 
   showEvenement(){
     const data = this.evenement;
+    this.active1 = '';
+    this.active2 = '';
+    this.active3 = 'active-rac';
     return this.getData = data;
   }
 

@@ -1,0 +1,58 @@
+.form
+{
+    background-color: #0000;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.title h1
+{ 
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFF;
+}
+
+.text p 
+{
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFF; 
+}
+input 
+{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #007878;
+}
+.row-check-pwd
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.row-check-pwd .check input
+{
+    background-color: #007878;
+}
+.row-check-pwd .check label
+{
+    color: #fff;
+    font-size: 13px;
+}
+.paswword-forget p
+{
+    color: #007878;
+    font-size: 13px;
+}
+
+.connexion button
+{
+    width: 200px;
+    height: 30px;
+}
+
