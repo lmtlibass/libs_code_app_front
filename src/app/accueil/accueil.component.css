@@ -122,3 +122,56 @@ h2
     margin-top: 3%;
     border: 1px #007878 solid;
 }
+
+.all-events
+{
+    background: rgb(0,120,120);
+    background: linear-gradient(90deg, rgba(0,120,120,0.8552463221616772) 16%,  rgba(100, 0, 90, 0.783) 100%);
+    padding: 10px;
+    color: white;
+    font-size: 10px;
+    height: 10px;
+    width: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 192px;
+    margin-top: 2%;
+    float: right;
+}
+.all-events:hover
+{
+   border: 2px #fff solid;
+   transition: 2s;
+}
+.all-events p 
+{
+    position: relative;
+    margin: auto;
+    margin-top: -6px;
+}
+.all-cours
+{
+    background: rgb(0,120,120);
+    background: linear-gradient(90deg, rgba(0,120,120,0.8552463221616772) 16%,  rgba(100, 0, 90, 0.783) 100%);
+    padding: 10px;
+    color: white;
+    font-size: 10px;
+    height: 10px;
+    width: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 192px;
+    margin-top: 2%;
+    float: right;
+}
+.all-cours:hover
+{
+   border: 2px #fff solid;
+   transition: 2s;
+}
+.all-cours p 
+{
+    position: relative;
+    margin: auto;
+    margin-top: -6px;
+}

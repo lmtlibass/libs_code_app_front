@@ -1,5 +1,5 @@
-import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-racourci',
@@ -30,7 +30,18 @@ export class RacourciComponent implements OnInit {
   active2 = '';
   active3 = '';
 
-  constructor() { }
+  demandeForm: FormGroup;
+  demandeClass = 'demandeHiden';
+
+
+  constructor(
+    private fb: FormBuilder,
+  ) { 
+    this.demandeForm = this.fb.group({
+      telephone: ['', Validators.required],
+      motivation: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
     this.getData = this.showDemande();
@@ -61,7 +72,32 @@ export class RacourciComponent implements OnInit {
     return this.getData = data;
   }
 
+  close(){
+    this.demandeClass = 'demandeHiden';
+  }
+
+   async redirect(){
+    switch(this.getData[0].link){
+      case 'accéder à mon espace':
+        window.location.href = 'https://www.formateur.com/login';
+        console.log('accéder à mon espace');
+        
+        break;
+      case 'Faire une demande':
+        if(this.demandeClass === 'demandeHiden'){
+          this.demandeClass = 'demandeVisible';
+        }else{
+          this.demandeClass = 'demandeHiden';
+        }
+        break;
+      case 'Partager un événement':
+        window.location.href = 'https://www.formateur.com/evenement';
+        break;
+  }
+
  
+
+}
 
 }
 

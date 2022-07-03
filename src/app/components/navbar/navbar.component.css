@@ -74,9 +74,135 @@
     text-align: center;
     cursor: pointer;
 }
+.btn-connexion p
+{
+    margin-top: -5px;
+}
 .btn-connexion:hover
 {   
     background-color: #6d0039;
     height: 20px;
     transition: 2s;
+}
+
+.loginFormVisible
+{
+    visibility: visible;
+    opacity: 1;
+    background-color: #000;
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-left: 40%;
+    padding: 4%;
+    border-radius: 5px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.titre-form h2
+{
+    font-size: 20px;
+    color: #fff;
+}
+.text p {
+    color: #fff;
+    font-size: 12px;
+}
+.input
+{
+    margin: 12px;
+    width: 150px;
+    background-color: #007878;
+    border: 1px #007878 solid;
+    padding: 3%;
+    border-radius: 5px;
+}
+.input:hover
+{
+    background-color: #fff;
+}
+.input::placeholder
+{
+    color: #fff;
+}
+.check
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+}
+.check p
+{
+    color: #fff;
+    font-size: 8px;
+}
+.btn-login
+{
+    margin-top: 5%;
+    width: 150px;
+    background-color: #007878;
+    color: #fff;
+    border: 1px #007878 transparent;
+    border-radius: 5px;
+    padding: 3%;
+    background: rgb(0,120,120);
+    background: linear-gradient(90deg, rgba(0,120,120,1) 70%, rgba(0,0,0,1) 100%);
+    cursor: pointer;
+    
+}
+.btn-login:hover
+{
+    background-color: #fff;
+    color: #000;
+    border: 1px #007878 solid;
+    transition: 1s;
+}
+.close-form img
+{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: -150px;
+}
+.close-form img:hover
+{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+.loginFormHidden
+{
+    visibility: hidden;
+    position: absolute;
+    transform-origin: left;
+    transition: 1s;
+}
+
+.registerFormVisible
+{
+    visibility: visible;
+    opacity: 1;
+    background-color: #000;
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-left: 40%;
+    padding: 4%;
+    border-radius: 5px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerFormHidden
+{
+    visibility: hidden;
+    position: absolute;
+    transform-origin: right;
+    transition: 1s;
 }

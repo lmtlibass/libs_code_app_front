@@ -12,6 +12,6 @@ export class EvenementsService {
   ) { }
 
   getEvenement(){
-    return this.http.get(environment.api_url + 'evenement');
+    return this.http.get(environment.api_url + 'evenementRe');
   }
 }

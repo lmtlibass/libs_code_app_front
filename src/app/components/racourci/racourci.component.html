@@ -4,12 +4,12 @@
         <p>
             {{dataSections.content}}
         </p>
-        <button>
+        <button (click)=" redirect()">
             {{dataSections.link}}
         </button>
     </div>
     <div class="btns-section">
-        <div class="d-formateur" (click)="showDemande()" [ngClass]="active1">
+        <div class="d-formateur" (click)="showDemande()" [ngClass]='active1'>
             <h4>devenir formateur</h4>
         </div>
         <div class="d-formateur" (click)="showAccesEspace()" [ngClass]='active2'>
@@ -20,3 +20,26 @@
         </div>
     </div>
 </div>
+
+<form  [formGroup]="demandeForm" [ngClass]='demandeClass'>
+    <div class="close-form" (click)="close()">
+        <img src="../../../assets/icones/close.png" alt="">
+    </div>
+    <div class="titre-form">
+        <h2>
+            Demande Pour Formateur
+        </h2>
+    </div>
+    <div class="text">
+        <p>Envoyer votre demande pour faire parie de nos créateurs</p>
+    </div>
+    <div>
+        <input class="input" placeholder="telephone" formControlName="telephone">
+      </div>
+    <div>
+      <textarea formControlName="motivation" placeholder="expliquez en quelques mots votre motivation" cols="30" rows="10"></textarea>
+    </div>
+    <div class="envoyer">
+      <button class="btn-demande" type="submit" expand="block" [disabled]="!demandeForm.valid" >Envoyer</button>
+    </div>
+  </form>
