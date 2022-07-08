@@ -1,0 +1,15 @@
+.rows
+{
+    width: 500px;
+    height: 35px;
+    background-color: #007878;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    margin-top: 4%;
+}
+span
+{
+    position: absolute;
+}

@@ -1,0 +1,27 @@
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.logo:hover
+{
+    margin-left: 30px;
+    transition: 1s;
+}
+#libs
+{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+#code 
+{
+    font-size: 15px;
+    font-weight: bolder;
+   
+}

@@ -38,9 +38,10 @@ export class RacourciComponent implements OnInit {
     private fb: FormBuilder,
   ) { 
     this.demandeForm = this.fb.group({
-      telephone: ['', Validators.required],
+      telephone:  ['', Validators.required],
       motivation: ['', Validators.required],
     });
+
   }
 
   ngOnInit(): void {

@@ -1,0 +1,51 @@
+.sidebar{
+    width: 200px;
+    background-color: #007878;
+    height: 100%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    margin-top: 10%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.logo:hover
+{
+    margin-left: 30px;
+    transition: 1s;
+}
+#libs
+{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+#code 
+{
+    font-size: 15px;
+    font-weight: bolder;
+   
+}
