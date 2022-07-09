@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AllCoursComponent } from './all-cours/all-cours.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CoursComponent } from './cours/cours.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
   { path: 'allcours', component: AllCoursComponent },
+  { path: 'cours', component: CoursComponent},
   { path: '**', redirectTo: '' }
 ]
 

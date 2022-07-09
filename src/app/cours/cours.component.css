@@ -17,11 +17,66 @@
 {
     font-size: 15px;
     font-weight: bolder;
-    color: #ffffff;
+    color: #007878;
 }
 #code 
 {
     font-size: 15px;
     font-weight: bolder;
    
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-cour{
+    width: 500px;
+    height: 40px;
+    border: 1px #007878 solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    color: #007878;
+}
+.cours-content{
+    margin: 5% auto;
+    width: 80%;
+    height: auto;
+    padding: 2%;
+    border: 1px #007878 solid;
+    border-radius: 5px;
+}
+.impression{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px #007878 solid;
+    border-radius: 5px;
+    width: 80%;
+    padding: 2%;
+}
+.note{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+.commentaire input{
+    width: 100%;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px #007878 solid;
+    margin: 0 auto;
+    text-align: start;
+    width: 500px;
+}
+.commentaire input:focus{
+    outline: none;
 }

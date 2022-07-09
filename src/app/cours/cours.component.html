@@ -1,8 +1,46 @@
 <div class="logo">
-    <div class="icone-logo">
+    <div class="icone-logo" >
         <img src="../../../assets/icones/home.png" alt="">
     </div>
     <div class="title-logo">
         <p><span id="libs">Libs</span><span id="code">Code</span></p>
+    </div>
+</div>
+<div class="head">
+    <div class="title-cour">
+        <h1>
+            {{cours.titre}}
+        </h1>
+    </div>
+    <app-back-arraw></app-back-arraw>
+</div>
+<div class="cours-content">
+    {{cours.contenu}}
+</div>
+<div class="impression">
+    <div class="note">
+        <span 
+            class="iconify" 
+            data-icon="flat-color-icons:like" 
+            data-width="24" 
+            data-height="24"
+        ></span>
+        <span 
+            class="iconify" 
+            data-icon="ant-design:dislike-twotone" 
+            style="color: blue;" 
+            data-width="24" 
+            data-height="24"
+        ></span>
+        <span 
+            class="iconify" 
+            data-icon="noto:neutral-face" 
+            style="color: blue;" 
+            data-width="24" 
+            data-height="24"
+        ></span>
+    </div>
+    <div class="commentaire">
+        <input type="text" placeholder="commentaire">
     </div>
 </div>

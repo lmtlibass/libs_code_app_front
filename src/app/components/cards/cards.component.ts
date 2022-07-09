@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from 'src/app/services/cours.service';
+import { Router } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-cards',
@@ -8,8 +10,13 @@ import { CoursService } from 'src/app/services/cours.service';
 })
 export class CardsComponent implements OnInit {
   cours!: any;
+  currentValue: any;
+
+
   constructor(
+    private storageService: StorageService,
     private courService: CoursService,
+    private route: Router,
   ) { }
 
   ngOnInit(): void {
@@ -22,11 +29,14 @@ export class CardsComponent implements OnInit {
       (data) => {
         this.cours = data;
         console.log(this.cours);  
-  });
+    });
+  }
+  
+  showCours(id: number){
+    return this.storageService.saveData('id_cours', id);
+     
+  }
+
+
 }
 
-
-
-
-
-}
