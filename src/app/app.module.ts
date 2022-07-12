@@ -12,7 +12,6 @@ import { CardsComponent } from './components/cards/cards.component';
 import { EvenementCardComponent } from './components/evenement-card/evenement-card.component';
 import { RacourciComponent } from './components/racourci/racourci.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DemandeFComponent } from './components/demande-f/demande-f.component';
 import { EvenementPComponent } from './components/evenement-p/evenement-p.component';
@@ -32,7 +31,6 @@ import { AuthInterceptor } from 'auth.interceptor';
     EvenementCardComponent,
     RacourciComponent,
     FooterComponent,
-    LoginComponent,
     RegisterComponent,
     DemandeFComponent,
     EvenementPComponent,

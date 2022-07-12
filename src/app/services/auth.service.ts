@@ -14,11 +14,11 @@ export class AuthService {
   ) { }
 
   register(user: User): Observable<any> {
-    return this.http.post(`${environment.api_url}/users`, user);
+    return this.http.post(`${environment.api_url}register`, user);
   }
   // Login
   signin(user: User): Observable<any> {
-    return this.http.post<any>(`${environment.api_url}/auth`, user);
+    return this.http.post<any>(`${environment.api_url}login`, user);
   }
 
 }
