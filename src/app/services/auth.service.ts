@@ -12,7 +12,7 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-
+//register
   register(user: User): Observable<any> {
     return this.http.post(`${environment.api_url}register`, user);
   }
