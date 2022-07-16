@@ -1,0 +1,75 @@
+<div class="nav-bar">
+    <div class="logo">
+        <div class="icone-logo">
+            <img src="../../../assets/icones/home.png" alt="">
+        </div>
+        <div class="title-logo">
+            <p><span id="libs">Libs</span><span id="code">Code</span></p>
+        </div>
+    </div>
+    <div class="rs">
+        <div class="afcebook">
+            <img class="logo-rs" src="../../../assets/icones/facebook.png" alt="">
+        </div>
+        <div class="ig">
+            <img class="logo-rs" src="../../../assets/icones/instgramme.png" alt="">
+        </div>
+        <div class="linkedin">
+            <img class="logo-rs" src="../../../assets/icones/linkedin.png" alt="">
+        </div>
+    </div>
+    <div class="btn-navbar">
+        <div class="btn-connexion">
+            <p>Déconnexion</p>
+        </div>
+    </div>
+</div>
+<div class="rows"  routerLink="/allevenements">
+    <span 
+        class="iconify" 
+        data-icon="bi:arrow-down-circle" 
+        style="color: white;" 
+        data-width="24" 
+        data-height="24" 
+        data-rotate="90deg"
+    ></span>
+    <h1>S'inscrire à l'événement </h1>
+</div>
+
+<div class="container">
+    <div class="desc-events" >
+        <p>
+            {{currentEvents.description}}
+        </p>
+    </div>
+    <div class="form-section">
+       <div class="form">
+            <form [formGroup]="inscriptEventsForm">
+                <div class="row mt-5">
+                    <input class="input" placeholder="Prenom" formControlName="prenom">
+                </div>
+                <div class="row mt-5">
+                    <input class="input" placeholder="Nom" formControlName="nom">
+                </div>
+                <div class="row mt-5">
+                    <input class="input" placeholder="Email" formControlName="email">
+                </div>
+                <div class="row mt-5">
+                    <input class="input" placeholder="Telephone" formControlName="telephone">
+                </div>
+                <div class="row mt-5">
+                    <textarea class="textarea" name="attentes" placeholder="vos attentes"  id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="row btn">
+                    <button class="login-btn">
+                        s'inscrire
+                    </button>
+                </div>
+            </form>
+       </div>
+       <div class="img">
+            <img src="../../assets/images/inscription.png" alt="">
+       </div>
+    </div>
+</div>
+<app-footer></app-footer>

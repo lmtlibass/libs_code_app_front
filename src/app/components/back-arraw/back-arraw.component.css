@@ -8,8 +8,10 @@
     align-items: center;
     padding-left: 2%;
     margin-top: 4%;
+    cursor: pointer;
 }
 span
 {
     position: absolute;
+    cursor: pointer;
 }

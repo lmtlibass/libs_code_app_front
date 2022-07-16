@@ -14,13 +14,14 @@ import { RacourciComponent } from './components/racourci/racourci.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DemandeFComponent } from './components/demande-f/demande-f.component';
-import { EvenementPComponent } from './components/evenement-p/evenement-p.component';
 import { BackArrawComponent } from './components/back-arraw/back-arraw.component';
 import { AllCoursComponent } from './all-cours/all-cours.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CoursComponent } from './cours/cours.component'
 import { AuthInterceptor } from 'auth.interceptor';
+import { AllEventsComponent } from './all-events/all-events.component';
+import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,12 @@ import { AuthInterceptor } from 'auth.interceptor';
     FooterComponent,
     RegisterComponent,
     DemandeFComponent,
-    EvenementPComponent,
     BackArrawComponent,
     AllCoursComponent,
     SideBarComponent,
-    CoursComponent
+    CoursComponent,
+    AllEventsComponent,
+    InscriptionEvenementComponent
   ],
   imports: [
     BrowserModule,

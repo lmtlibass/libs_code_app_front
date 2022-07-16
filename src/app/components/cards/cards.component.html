@@ -1,8 +1,8 @@
 <div class="section-cours" >
     <div class="card" 
-            *ngFor="let courdesc of cours" 
-            (click)="showCours(this.courdesc.id)"
-            [routerLink]="['/cours']">
+        *ngFor="let courdesc of cours" 
+        (click)="showCours(this.courdesc.id)"
+    >
         <div class="card-img">
         <img src="../../../assets/images/phpimg.jpg" alt="">
     
@@ -12,11 +12,6 @@
         </div>
         <div class="card-texte" >
             <p>{{courdesc.description}}</p>
-        </div>
-        <div class="card-btn">
-            <button class="btn-learn" >
-                Learn More
-            </button>
         </div>
     </div>
 </div>

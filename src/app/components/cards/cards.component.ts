@@ -34,7 +34,6 @@ export class CardsComponent implements OnInit {
   
   showCours(id: number){
     return this.storageService.saveData('id_cours', id);
-     
   }
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from '../services/cours.service';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-all-cours',
@@ -9,6 +10,7 @@ import { CoursService } from '../services/cours.service';
 export class AllCoursComponent implements OnInit {
 allCours: any;
   constructor(
+    private storageService: StorageService,
     private coursService: CoursService,
   ) { }
 
@@ -24,6 +26,9 @@ allCours: any;
         this.allCours = data;
       }
     )
+  }
+  showCours(id: number){
+    return this.storageService.saveData('id_cours', id);
   }
 
 }

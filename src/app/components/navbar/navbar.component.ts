@@ -25,14 +25,14 @@ export class NavbarComponent implements OnInit {
     private authState: AuthStateService
   ) { 
     this.connexionform = this.fb.group({
-      email: [],
-      password: [],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
 
     this.inscriptionForm = this.fb.group({
-      name: [''],
-      email: [''],
-      password: [''],
+      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
