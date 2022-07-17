@@ -24,6 +24,7 @@ import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
 import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { CKEditorModule } from 'ng2-ckeditor';
+import { AddCoursComponent } from './add-cours/add-cours.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
     CoursComponent,
     AllEventsComponent,
     InscriptionEvenementComponent,
-    EspaceUserComponent
+    EspaceUserComponent,
+    AddCoursComponent
   ],
   imports: [
     BrowserModule,

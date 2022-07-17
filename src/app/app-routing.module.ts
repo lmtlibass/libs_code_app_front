@@ -7,6 +7,7 @@ import { CoursComponent } from './cours/cours.component';
 import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
 import { EspaceUserComponent } from './espace-user/espace-user.component';
+import { AddCoursComponent } from './add-cours/add-cours.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'allevenements', component: AllEventsComponent},
   { path: 'inscriptionevenement', component: InscriptionEvenementComponent},
   { path: 'espaceuser', component: EspaceUserComponent},
+  { path: 'addcours', component: AddCoursComponent},
   { path: '**', redirectTo: '' }
 
 ]

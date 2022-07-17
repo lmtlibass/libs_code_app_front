@@ -4,7 +4,7 @@
     </div>
     <div class="icons-links">
         <div class="rows">
-            <div class="cols">
+            <div class="cols" routerLink="/addcours">
                <div class="span">
                     <span 
                         id="liste-evenement"
@@ -77,14 +77,13 @@
         </div>
     </div>
     <ckeditor
-        class="wiswyg"
         [(ngModel)]="ckeditorContent">
-            <ckbutton [name]="'saveButton'"
-            [command]="'saveCmd'"
-            (click)="save($event)"
-            [icon]="'save.png'"
-            [label]="'Save Document'"
-            [toolbar]="'clipboard,1'">
+        <ckbutton [name]="'saveButton'"
+        [command]="'saveCmd'"
+        (click)="save($event)"
+        [icon]="'save.png'"
+        [label]="'Save Document'"
+        [toolbar]="'clipboard,1'">
     </ckbutton>
 </ckeditor>
     <app-footer></app-footer>
