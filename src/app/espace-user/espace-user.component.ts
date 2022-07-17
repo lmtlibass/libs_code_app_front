@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./espace-user.component.css']
 })
 export class EspaceUserComponent implements OnInit {
-
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
+  
+  ckeditorContent: string = '<p>Hello CKEditor</p>';
 
+  save(data: any){
+    console.log(data);
+    
+  }
 }
