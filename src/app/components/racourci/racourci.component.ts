@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-racourci',
@@ -36,6 +37,7 @@ export class RacourciComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) { 
     this.demandeForm = this.fb.group({
       telephone:  ['', Validators.required],
@@ -80,7 +82,7 @@ export class RacourciComponent implements OnInit {
    async redirect(){
     switch(this.getData[0].link){
       case 'accéder à mon espace':
-        window.location.href = 'https://www.formateur.com/login';
+        this.router.navigate(['/espaceuser']);
         console.log('accéder à mon espace');
         
         break;

@@ -22,6 +22,8 @@ import { CoursComponent } from './cours/cours.component'
 import { AuthInterceptor } from 'auth.interceptor';
 import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
+import { EspaceUserComponent } from './espace-user/espace-user.component';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { InscriptionEvenementComponent } from './inscription-evenement/inscripti
     SideBarComponent,
     CoursComponent,
     AllEventsComponent,
-    InscriptionEvenementComponent
+    InscriptionEvenementComponent,
+    EspaceUserComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +51,9 @@ import { InscriptionEvenementComponent } from './inscription-evenement/inscripti
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

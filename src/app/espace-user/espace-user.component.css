@@ -1,0 +1,53 @@
+.row-title{
+    width: 60%;
+    margin: 4% auto;
+    border-radius: 5px;
+    background-color: #007878;
+    color: white;
+    height: 40px;
+}
+.row-title h1{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1.5%;
+}
+.icons-links
+{
+    margin: 5% auto;
+    align-items: center;
+}
+.rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% auto;
+    width: 70%;
+    height: 30vh;
+}
+.cols{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7% auto;
+}
+.libelle p {
+    margin: 8% auto;
+    font-size: 1em;
+
+}
+.span{
+    width: 100px;
+    height: 80px;
+    padding: 08%;
+    background-color: #007676;
+    display: flex;
+    align-content: center;
+    box-shadow: -2px 10px 50px -9px rgba(160, 160, 160, 0.37);
+    cursor: pointer;
+}
+#liste-evenement{
+    color: white;
+    margin: 15% auto ;
+}

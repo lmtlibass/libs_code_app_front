@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Evenement } from '../models/evenement';
+import { ListeInscrits } from '../models/liste-inscrits';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +32,11 @@ export class EvenementsService {
   //ajouter un evenement
   addEvenement(evenement: Evenement): Observable<any>{
     return this.http.post(environment.api_url + 'evenement', evenement);
+  }
+
+  //enregistrer incrits
+
+  saveListeInscrit(listeInscrits: ListeInscrits): Observable<any>{
+    return this.http.post(environment.api_url + 'addlisteinscrit', listeInscrits);
   }
 }

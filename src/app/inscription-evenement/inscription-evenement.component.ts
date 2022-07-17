@@ -3,6 +3,8 @@ import { EvenementsService } from '../services/evenements.service';
 import { StorageService } from '../services/storage.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ListeInscrits } from '../models/liste-inscrits';
+
 
 @Component({
   selector: 'app-inscription-evenement',
@@ -14,6 +16,16 @@ export class InscriptionEvenementComponent implements OnInit {
   currentEvents: any;
   inscriptEventsForm: FormGroup;
 
+  
+  liste:  ListeInscrits = {
+    prenom:         '',
+    nom:            '',
+    email:          '',
+    telephone:      '',
+    attentes:       '',
+    evenement_id:  '',
+  }
+
 
   constructor(
     private evenementsService: EvenementsService,
@@ -24,15 +36,17 @@ export class InscriptionEvenementComponent implements OnInit {
   ) { 
     this.inscriptEventsForm = this.fb.group({
       prenom: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
-      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      nom: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       email: ['', [Validators.required, Validators.email]],
       telephone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
+      attentes: ['', [Validators.required, Validators.minLength(20), Validators.maxLength(250)]],
     });
   }
 
   ngOnInit(): void {
     const id = this.id_evenement;
     this.getEvenementById(id);
+
   }
 
  getEvenementById(id : any){
@@ -40,6 +54,26 @@ export class InscriptionEvenementComponent implements OnInit {
       (data: any) => {
         this.currentEvents = data;
       })
+ }
+ 
+ storeData(){
+ const id_e = this.storageService.getData('id_evenement');
+  this.liste.prenom = this.inscriptEventsForm.value.prenom;
+  this.liste.nom = this.inscriptEventsForm.value.nom;
+  this.liste.email = this.inscriptEventsForm.value.email;
+  this.liste.telephone = this.inscriptEventsForm.value.telephone;
+  this.liste.attentes = this.inscriptEventsForm.value.attentes;
+  this.liste.evenement_id = Number(id_e);
+  console.log(this.liste);
+  this.saveListeInscrit();
+  this.inscriptEventsForm.reset();
+ }
+
+ saveListeInscrit(){
+  return this.evenementsService.saveListeInscrit(this.liste).subscribe(
+    (data: any) => {
+      console.log(data);
+    });
  }
 
 }

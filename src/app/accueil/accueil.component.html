@@ -1,57 +1,57 @@
-<app-navbar></app-navbar>
-<div class="bar-menu">
-    <ul class="acueil-ul">
-        <li><a href="">Cours</a></li>
-        <li><a href="">Evenements</a></li>
-    </ul>
-</div>
-<div class="intro-section">
-    <div class="citation">
-        <p>
-            L'intelligence n'est pas la capacité de stocker <br>
-            des informations, mais de savoir où les trouver.
-        </p>
-    </div>
-    <div class="logo-img">
-        <img src="../../assets/images/iconedev.png" alt="">
-    </div>
-</div>
-<div class="title-sectio">
-    <h2>Cours les plus Suivis</h2>
-</div>
-
-    <app-cards></app-cards>
-    <div class="all-cours" routerLink="/allcours">
-        <p>Voir tous les evenements</p>
-    </div>
-
-<div class="title-sectio">
-    <h2>Derniers Evenements</h2>
-</div>
-<app-evenement-card></app-evenement-card>
-<div class="all-events" routerLink="/allevenements">
-    <p>Voir tous les evenements</p>
-</div>
-<div class="section1">
-    <div class="section">
-        <img src="../../assets/images/section.png" alt="">
-    </div>
-    <div class="inter-section">
-        <div class="text-section">
-            <h1>
-                Decouvrir nos conditions <br>
-                 d’utilisation
-            </h1>
-            <p>Rejoignez des gens qui ont la même passion que vous! </p>
+        <app-navbar></app-navbar>
+        <div class="bar-menu">
+            <ul class="acueil-ul">
+                <li><a routerLink="/allcours" routerLinkActive="active">Cours</a></li>
+                <li><a routerLink="/allevenements" routerLinkActive="active">Evenements</a></li>
+            </ul>
         </div>
-        <div class="btn-section">
-            <button>    
-                 voir plus
-            </button>
+        <div class="intro-section">
+            <div class="citation">
+                <p>
+                    L'intelligence n'est pas la capacité de stocker <br>
+                    des informations, mais de savoir où les trouver.
+                </p>
+            </div>
+            <div class="logo-img">
+                <img src="../../assets/images/iconedev.png" alt="">
+            </div>
         </div>
-    </div>
-</div>
+        <div class="title-sectio">
+            <h2>Cours les plus Suivis</h2>
+        </div>
 
-<app-racourci></app-racourci>
+            <app-cards></app-cards>
+            <div class="all-cours" routerLink="/allcours">
+                <p>Voir tous les evenements</p>
+            </div>
 
-<app-footer></app-footer>
+        <div class="title-sectio">
+            <h2>Derniers Evenements</h2>
+        </div>
+        <app-evenement-card></app-evenement-card>
+        <div class="all-events" routerLink="/allevenements">
+            <p>Voir tous les evenements</p>
+        </div>
+        <div class="section1">
+            <div class="section">
+                <img src="../../assets/images/section.png" alt="">
+            </div>
+            <div class="inter-section">
+                <div class="text-section">
+                    <h1>
+                        Decouvrir nos conditions <br>
+                        d’utilisation
+                    </h1>
+                    <p>Rejoignez des gens qui ont la même passion que vous! </p>
+                </div>
+                <div class="btn-section">
+                    <button>    
+                        voir plus
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <app-racourci></app-racourci>
+
+        <app-footer></app-footer>

@@ -175,6 +175,12 @@ h2
     margin: auto;
     margin-top: -6px;
 }
+.active
+{
+    border: 2px #fff solid;
+    color: #610141;
+    transition: 2s;
+}
 
 @media only screen and (max-width: 600px){
 

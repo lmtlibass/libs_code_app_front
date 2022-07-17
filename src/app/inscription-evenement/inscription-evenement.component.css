@@ -112,6 +112,7 @@ span
 .desc-events{
     text-align: center;
     margin: 5% auto;
+    width: 70%;
 }
 .form-section{
     display: flex;
@@ -156,6 +157,7 @@ textarea{
 .img img{
     width: 400px;
     height: 300px;
+    margin-top: 10%;
 }
 .login-btn{
     background: rgb(0,120,120);

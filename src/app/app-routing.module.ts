@@ -6,6 +6,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { CoursComponent } from './cours/cours.component';
 import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
+import { EspaceUserComponent } from './espace-user/espace-user.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'cours', component: CoursComponent},
   { path: 'allevenements', component: AllEventsComponent},
   { path: 'inscriptionevenement', component: InscriptionEvenementComponent},
+  { path: 'espaceuser', component: EspaceUserComponent},
   { path: '**', redirectTo: '' }
+
 ]
 
 @NgModule({
