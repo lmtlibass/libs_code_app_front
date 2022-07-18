@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCoursComponent implements OnInit {
 
+  ckeditorContent: string = '<p>Hello CKEditor</p>';
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  save(data: any){
+    console.log(data);
+    
+  }
 }

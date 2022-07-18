@@ -17,6 +17,17 @@
         <div class="titre-section">
             <input type="text" >
         </div>
-        
+        <div class="editeeur-section">
+            <ckeditor
+            [(ngModel)]="ckeditorContent">
+            <ckbutton [name]="'saveButton'"
+            [command]="'saveCmd'"
+            (click)="save($event)"
+            [icon]="'save.png'"
+            [label]="'Save Document'"
+            [toolbar]="'clipboard,1'">
+            </ckbutton>
+    </ckeditor>
+        </div>
     </div>
 </div>

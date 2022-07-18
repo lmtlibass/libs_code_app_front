@@ -12,10 +12,7 @@ export class EspaceUserComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  ckeditorContent: string = '<p>Hello CKEditor</p>';
+ 
 
-  save(data: any){
-    console.log(data);
-    
-  }
+ 
 }
