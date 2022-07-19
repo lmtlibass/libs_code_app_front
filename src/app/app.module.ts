@@ -25,6 +25,7 @@ import { InscriptionEvenementComponent } from './inscription-evenement/inscripti
 import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { AddCoursComponent } from './add-cours/add-cours.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { AddCoursComponent } from './add-cours/add-cours.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    CKEditorModule
+    CKEditorModule,
+    MatDialogModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
