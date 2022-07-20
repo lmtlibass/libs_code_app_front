@@ -17,13 +17,13 @@ export class AddCoursComponent implements OnInit {
   cours: Cours = {
     titre: '',
     contenu: '',
-    status: false,
+    statut: 1,
     module_id: undefined,
     description: '',
     user_id: undefined
   }
 
-  ckeditorContent: string = ` ` ;
+  ckeditorContent: string = '' ;
   constructor(
     private coursService: CoursService,
     public dialog: MatDialog,
@@ -35,8 +35,9 @@ export class AddCoursComponent implements OnInit {
 
   save(){
     this.cours.titre       = this.cours.titre;
-    this.cours.contenu     = this.sanitizer.bypassSecurityTrustHtml(this.cours.contenu );
-    this.cours.status      = false;
+    // this.cours.contenu     = this.sanitizer.bypassSecurityTrustHtml(this.cours.contenu );
+    this.cours.contenu     = this.ckeditorContent;
+    this.cours.statut      = 1;
     this.cours.module_id   = 1;
     this.cours.description = this.cours.description;
     this.cours.user_id     = 1 

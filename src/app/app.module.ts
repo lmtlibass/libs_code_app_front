@@ -26,6 +26,11 @@ import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { AddCoursComponent } from './add-cours/add-cours.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
+import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
+import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
+import { DetailsCoursComponent } from './admin/details-cours/details-cours.component';
+import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 
 
 @NgModule({
@@ -46,7 +51,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     AllEventsComponent,
     InscriptionEvenementComponent,
     EspaceUserComponent,
-    AddCoursComponent
+    AddCoursComponent,
+    ListeDemFormateurComponent,
+    ListeEvenementComponent,
+    ListeCoursComponent,
+    DetailsCoursComponent,
+    ListeUserComponent
   ],
   imports: [
     BrowserModule,

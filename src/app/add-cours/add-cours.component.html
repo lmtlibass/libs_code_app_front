@@ -31,18 +31,15 @@
         </div>
         <div class="editeeur-section">
             <ckeditor
-                [(ngModel)]="ckeditorContent">
+                [(ngModel)]="ckeditorContent"
+                
+            >
             </ckeditor> 
         </div>
         <div class="bnt">
             <button (click)="save()">
                 Envoyer
             </button>
-        </div>
-        <div class="rendu">
-            <div [innerHTML] = cours.contenu>
-
-            </div>
         </div>
 </div>
 <app-footer></app-footer>

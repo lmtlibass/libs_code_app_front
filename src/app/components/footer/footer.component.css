@@ -1,15 +1,15 @@
 .footer
 {
     background: #007878; 
-    margin-top: 8%;
-    height: 450px;
+    margin-top: 150px;
+    height: 350px;
     text-align: center;   
 }
 
 .footer .row
 {
     position: absolute;
-    height: 150px;
+    height: 100px;
     background-color: #fff;
     z-index: 1;
     width: 100%;
@@ -18,17 +18,17 @@
 .mail .mail-footer
 {
     width: 400px;
-    height: 50px;
-    margin-top: 10%;
+    height: 40px;
+    margin-top: 7%;
     border-radius: 20px;
     border: #007878;
 }
 .mail img
 {
     margin-left: -60px;
-    margin-top: 10.5%;
+    margin-top: 7.5%;
     background-color: #007878;
-    padding: 10px;
+    padding: 5px;
     position: absolute;
     border-radius: 100px;
     cursor: pointer;
@@ -48,14 +48,14 @@ input::placeholder
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 30%;
-    padding: 3%;
+    width: 25%;
+    padding: 4%;
     margin: 0 auto;
 }
 .quick-link ul li
 {
     list-style: none;
-    font-size: 20px;
+    font-size: 19px;
     text-decoration: none;
 
 }
@@ -63,6 +63,12 @@ input::placeholder
 {
     text-decoration: none;
     color: #ffff;
+    padding: 3%;
+}
+.quick-link ul li a:hover
+{
+    text-decoration: none;
+    color: #78004e;
     padding: 3%;
 }
 .copiright
@@ -77,5 +83,9 @@ input::placeholder
     flex-direction: row;
     justify-content: space-around;
     width: 10%;
-    margin: 3% auto;
+    margin: 0% auto;
+}
+.copiright 
+{
+    margin-top: 30px;
 }

@@ -14,7 +14,7 @@
     </div>
     <app-back-arraw></app-back-arraw>
 </div>
-<div class="cours-content">
+<div class="cours-content" [innerHTML] = cours.contenu>
     {{cours.contenu}}
 </div>
 <div class="impression">
@@ -44,3 +44,4 @@
         <input type="text" placeholder="commentaire">
     </div>
 </div>
+<app-footer></app-footer>
