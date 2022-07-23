@@ -13,12 +13,22 @@ export class CoursService {
     private http: HttpClient,
   ) { }
 
+  //recuperer la liste des cours les plus recents
   getCours(){
     return this.http.get(environment.api_url + 'coursRe');
   }
+
+  //recuperer la liste de tous les cours
   getAllCours(){
     return this.http.get(environment.api_url + 'cours');
   }
+
+  //recuperer la liste des cours qui n'ont pas encore été validé par l'admin
+  getCoursNonValide(){
+    return this.http.get(environment.api_url + 'coursA');
+  }
+
+  //recuperer un cours par son id
   showCours(id: number){
     return this.http.get(environment.api_url + 'cours/'+ id)
   }

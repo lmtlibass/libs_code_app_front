@@ -1,1 +1,23 @@
-<p>liste-cours works!</p>
+<app-navbar></app-navbar>
+
+<div class="container" style="display: flex; flex-direction: row">
+    <div class="menu">
+        <app-sidebar-admin></app-sidebar-admin>
+    </div>
+    <div class="section-cours" >
+        <div class="card" 
+            *ngFor="let cours of coursNonValide" 
+        >
+            <div class="card-img">
+            <img src="../../../assets/images/phpimg.jpg" alt="">
+        
+            </div>
+            <div class="card-title">
+                <h3>{{cours.titre}}</h3>
+            </div>
+            <div class="card-texte" >
+                <p>{{cours.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

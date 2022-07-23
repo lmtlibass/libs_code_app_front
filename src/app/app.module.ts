@@ -29,8 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
 import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
 import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
-import { DetailsCoursComponent } from './admin/details-cours/details-cours.component';
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
+import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
 
 
 @NgModule({
@@ -55,8 +55,8 @@ import { ListeUserComponent } from './admin/liste-user/liste-user.component';
     ListeDemFormateurComponent,
     ListeEvenementComponent,
     ListeCoursComponent,
-    DetailsCoursComponent,
-    ListeUserComponent
+    ListeUserComponent,
+    SidebarAdminComponent
   ],
   imports: [
     BrowserModule,

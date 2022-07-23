@@ -36,7 +36,7 @@ export class CoursComponent implements OnInit {
 
   addCommentaire(commentaire: any){
    
-      }
+  }
 
 
   getCommentaire(){

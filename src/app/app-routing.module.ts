@@ -8,6 +8,10 @@ import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
 import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { AddCoursComponent } from './add-cours/add-cours.component';
+import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
+import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
+import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
+import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -17,6 +21,11 @@ const routes: Routes = [
   { path: 'inscriptionevenement', component: InscriptionEvenementComponent},
   { path: 'espaceuser', component: EspaceUserComponent},
   { path: 'addcours', component: AddCoursComponent},
+  //admin
+  { path: 'admin/listeCours', component: ListeCoursComponent},
+  { path: 'admin/listeDemFormateur', component: ListeDemFormateurComponent},
+  { path: 'admin/listeEvenement', component: ListeEvenementComponent},
+  { path: 'admin/listeUser', component: ListeUserComponent},
   { path: '**', redirectTo: '' }
 
 ]
