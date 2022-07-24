@@ -4,7 +4,7 @@
     <div class="menu">
         <app-sidebar-admin></app-sidebar-admin>
     </div>
-    <div class="section-cours" >
+    <!-- <div class="section-cours" >
         <div class="card" 
             *ngFor="let cours of coursNonValide" 
         >
@@ -19,5 +19,19 @@
                 <p>{{cours.description}}</p>
             </div>
         </div>
+    </div> -->
+    <div class="cours">
+        <div class="titre">
+            <h1>Liste des Cours</h1>
+        </div> 
+        <mat-card class="card" *ngFor="let cours of coursNonValide" >
+            <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+            <mat-card-title class="card-title">
+                {{cours.titre}}
+            </mat-card-title>
+            <mat-card-content>
+                {{cours.description}}
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>

@@ -25,12 +25,14 @@ import { InscriptionEvenementComponent } from './inscription-evenement/inscripti
 import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { AddCoursComponent } from './add-cours/add-cours.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule, } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
 import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
 import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
+import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
 
 
 @NgModule({
@@ -56,7 +58,8 @@ import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.
     ListeEvenementComponent,
     ListeCoursComponent,
     ListeUserComponent,
-    SidebarAdminComponent
+    SidebarAdminComponent,
+    DetailCoursComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,7 @@ import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.
     AppRoutingModule,
     CKEditorModule,
     MatDialogModule,
+    MatCardModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

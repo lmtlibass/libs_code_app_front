@@ -27,6 +27,9 @@ export class CoursService {
   getCoursNonValide(){
     return this.http.get(environment.api_url + 'coursA');
   }
+  showCoursNonValide(id: any){
+    return this.http.get(environment.api_url + 'coursA' + id);
+  }
 
   //recuperer un cours par son id
   showCours(id: number){
