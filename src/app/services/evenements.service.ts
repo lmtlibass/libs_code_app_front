@@ -24,6 +24,11 @@ export class EvenementsService {
     return this.http.get(environment.api_url + 'evenement');
   }
 
+  //evenement pas encore validé
+  getEvenementNonValide(){
+    return this.http.get(environment.api_url + 'evenementA');
+  }
+
   //show un evenement
   getEvenementById(id: number){
     return this.http.get(environment.api_url + 'evenement/' + id);
@@ -35,7 +40,6 @@ export class EvenementsService {
   }
 
   //enregistrer incrits
-
   saveListeInscrit(listeInscrits: ListeInscrits): Observable<any>{
     return this.http.post(environment.api_url + 'addlisteinscrit', listeInscrits);
   }

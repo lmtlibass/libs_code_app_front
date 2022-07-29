@@ -1,1 +1,39 @@
-<p>liste-evenement works!</p>
+<app-navbar></app-navbar>
+
+<div class="container" style="display: flex; flex-direction: row">
+    <div class="menu">
+        <app-sidebar-admin></app-sidebar-admin>
+    </div>
+    <div class="evenement">
+        <div class="titre">
+            <h1>Liste des evenement</h1>
+        </div>
+        <div class="card-evenement">
+            <div class="card-zone"*ngFor="let evenement of evenements" >
+                <ng-template #longContent let-modal>
+                    <div class="modal-header">
+                      <h4 class="modal-title">{{evenement.titre}}</h4>
+                      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                    </div>
+                    <div class="modal-body">
+                        {{evenement.description}}
+                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                    </div>
+                </ng-template>
+                <mat-card class="card"  (click)="openScrollableContent(longContent)">
+                    <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+                    <mat-card-title class="card-title">
+                        {{evenement.titre}}
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{evenement.description}}
+                    </mat-card-content>
+                </mat-card>
+                
+                
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.titre{
+    margin: 4% 50%;
+    width: 500px;
+}
+.titre h1{
+    font-size: 30px;
+    color: #007878;
+    margin-top: 20px;
+    font-family: roboto;
+    font-size: 24px;
+}
+.evenement{
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 40px;
+}
+.card-title{
+    color: #007878;
+    font-size: 20px;
+}
+.card{
+    width: 170px;
+    cursor: pointer;
+}
+.card-evenement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.card-zone{
+    padding: 10px;
+}

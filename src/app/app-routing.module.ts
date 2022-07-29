@@ -12,6 +12,7 @@ import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
 import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
 import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
+import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
 
 const routes: Routes = [
   { path: '', component: AccueilComponent},
@@ -26,8 +27,9 @@ const routes: Routes = [
   { path: 'admin/listeDemFormateur', component: ListeDemFormateurComponent},
   { path: 'admin/listeEvenement', component: ListeEvenementComponent},
   { path: 'admin/listeUser', component: ListeUserComponent},
+  { path: 'admin/detailCours', component:DetailCoursComponent},
   { path: '**', redirectTo: '' }
-
+ 
 ]
 
 @NgModule({

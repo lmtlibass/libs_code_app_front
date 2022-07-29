@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cours } from 'src/app/models/cours';
 
 @Component({
   selector: 'app-liste-dem-formateur',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeDemFormateurComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showCours(id: any){
+
   }
 
 }

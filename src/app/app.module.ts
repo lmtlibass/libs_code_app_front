@@ -33,6 +33,7 @@ import { ListeCoursComponent } from './admin/liste-cours/liste-cours.component';
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
 import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { DetailCoursComponent } from './admin/detail-cours/detail-cours.componen
     AppRoutingModule,
     CKEditorModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="645.22388"
+   height="333.34528"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="cycle_V.svg">
+  <title
+     id="title3627">Cycle en V</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="372.88843"
+     inkscape:cy="197.88056"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="725"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Cycle en V</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:date>Lundi 6 septembre 2010</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>HEINRICH Yannick</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Inkscape</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-110.49639,-521.22325)">
+    <path
+       style="fill:none;stroke:#bebebe;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 152.53303,542.23515 434.36559,833.15908 719.73369,547.79099"
+       id="path3629" />
+    <rect
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       id="rect2816"
+       width="92.182327"
+       height="46.091164"
+       x="110.69312"
+       y="521.41998"
+       ry="4.7777433" />
+    <rect
+       ry="4.7777433"
+       y="591.48071"
+       x="179.77414"
+       height="46.091164"
+       width="92.182327"
+       id="rect3590"
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1" />
+    <rect
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       id="rect3592"
+       width="92.182327"
+       height="46.091164"
+       x="248.85515"
+       y="664.48505"
+       ry="4.7777433" />
+    <rect
+       ry="4.7777433"
+       y="736.55981"
+       x="317.93616"
+       height="46.091164"
+       width="92.182327"
+       id="rect3594"
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1" />
+    <rect
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       id="rect3596"
+       width="92.182327"
+       height="46.091164"
+       x="387.01715"
+       y="808.28064"
+       ry="4.7777433" />
+    <rect
+       ry="4.7777433"
+       y="521.41998"
+       x="-755.52356"
+       height="46.091164"
+       width="92.182327"
+       id="rect3598"
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       id="rect3600"
+       width="92.182327"
+       height="46.091164"
+       x="-686.24237"
+       y="591.48071"
+       ry="4.7777433"
+       transform="scale(-1,1)" />
+    <rect
+       ry="4.7777433"
+       y="664.48505"
+       x="-617.36151"
+       height="46.091164"
+       width="92.182327"
+       id="rect3602"
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#d4c9c9;fill-opacity:0.84090905;stroke:#999999;stroke-width:0.3934612;stroke-opacity:1"
+       id="rect3604"
+       width="92.182327"
+       height="46.091164"
+       x="-548.28052"
+       y="736.55981"
+       ry="4.7777433"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="156.74733"
+       y="542.07983"
+       id="text4133"><tspan
+         sodipodi:role="line"
+         x="158.25313"
+         y="542.07983"
+         id="tspan4141">Analyse des </tspan><tspan
+         sodipodi:role="line"
+         x="156.74733"
+         y="553.90448"
+         id="tspan4149">besoins</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="225.78677"
+       y="617.32538"
+       id="text4151"><tspan
+         sodipodi:role="line"
+         x="225.78677"
+         y="617.32538"
+         id="tspan4153"><tspan
+           x="225.78677"
+           y="617.32538"
+           id="tspan4155">Spécifications</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="294.91397"
+       y="685.1449"
+       id="text4157"><tspan
+         sodipodi:role="line"
+         x="296.41977"
+         y="685.1449"
+         id="tspan4165">Conception </tspan><tspan
+         sodipodi:role="line"
+         x="294.91397"
+         y="696.96954"
+         id="tspan4173">architecturale</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="364.16821"
+       y="757.21967"
+       id="text4175"><tspan
+         sodipodi:role="line"
+         x="364.16821"
+         y="757.21967"
+         id="tspan4183">Conception</tspan><tspan
+         sodipodi:role="line"
+         x="364.16821"
+         y="769.04431"
+         id="tspan4191">détaillée</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="433.09445"
+       y="833.93597"
+       id="text4193"><tspan
+         sodipodi:role="line"
+         x="433.09445"
+         y="833.93597"
+         id="tspan4195"><tspan
+           x="433.09445"
+           y="833.93597"
+           id="tspan4197">Codage</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="502.02075"
+       y="757.07422"
+       id="text4199"><tspan
+         sodipodi:role="line"
+         x="503.52655"
+         y="757.07422"
+         id="tspan4207">Tests </tspan><tspan
+         sodipodi:role="line"
+         x="502.02075"
+         y="768.89886"
+         id="tspan4215">unitaires</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="571.24261"
+       y="684.99945"
+       id="text4217"><tspan
+         sodipodi:role="line"
+         x="572.74841"
+         y="684.99945"
+         id="tspan4225">Tests </tspan><tspan
+         sodipodi:role="line"
+         x="571.24261"
+         y="696.8241"
+         id="tspan4233">détaillés</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="640.41681"
+       y="612.14056"
+       id="text4235"><tspan
+         sodipodi:role="line"
+         x="640.41681"
+         y="612.14056"
+         id="tspan4243">Tests de</tspan><tspan
+         sodipodi:role="line"
+         x="640.41681"
+         y="623.96521"
+         id="tspan4251">validation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.45969677px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="709.21991"
+       y="547.84668"
+       id="text4253"><tspan
+         sodipodi:role="line"
+         x="709.21991"
+         y="547.84668"
+         id="tspan4255"><tspan
+           x="709.21991"
+           y="547.84668"
+           id="tspan4257">Recette</tspan></tspan></text>
+  </g>
+</svg>

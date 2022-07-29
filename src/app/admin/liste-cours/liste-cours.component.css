@@ -20,4 +20,5 @@
 }
 .card{
     width: 170px;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursService } from 'src/app/services/cours.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class ListeCoursComponent implements OnInit {
 
   constructor(
     private coursService: CoursService, 
+    private storageService: StorageService
   ) { }
 
   ngOnInit(): void {
@@ -27,6 +29,9 @@ export class ListeCoursComponent implements OnInit {
       }
     )
   }
- 
+  //recupérer et stocker  l'id du cours selectionner dans le storage
+  showCours(id: number){
+    return this.storageService.saveData('id_coursA', id);
+  }
 
 }

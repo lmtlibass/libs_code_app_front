@@ -1,0 +1,90 @@
+.logo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.logo:hover
+{
+    margin-left: 30px;
+    transition: 1s;
+}
+#libs
+{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #007878;
+}
+#code 
+{
+    font-size: 15px;
+    font-weight: bolder;
+   
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-cour{
+    width: 500px;
+    height: 30px;
+    border: 1px #007878 solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    color: #007878;
+}
+.cours-content{
+    margin: 5% auto;
+    width: 80%;
+    height: auto;
+    padding: 2%;
+    border: 1px #007878 solid;
+    border-radius: 5px;
+}
+.btn-group{
+    float: right;
+    margin-right: 8%;
+}
+.btn-group .btn-1{
+    background: rgb(0,120,120);
+    background: linear-gradient(90deg, rgba(0,120,120,0.8552463221616772) 16%,  rgba(0, 83, 100, 0.783) 100%);
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 2%;
+    float: right;
+}
+.btn-group .btn-2{
+    background: rgb(84, 1, 62);
+    background: linear-gradient(90deg, rgba(120, 0, 94, 0.855) 16%,  rgba(0, 85, 100, 0.783) 100%);
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 2%;
+    float: right;
+}
+.back{
+    float: left;
+    margin-left: 8%;
+    width: 70px;
+    border-radius: 5px;
+    background-color: #007878;
+    cursor: pointer;
+}

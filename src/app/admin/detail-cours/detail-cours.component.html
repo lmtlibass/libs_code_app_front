@@ -1,1 +1,26 @@
-<p>detail-cours works!</p>
+<div class="logo">
+    <div class="icone-logo" >
+        <img src="../../../assets/icones/home.png" alt="">
+    </div>
+    <div class="title-logo">
+        <p><span id="libs">Libs</span><span id="code">Code</span></p>
+    </div>
+</div>
+<div class="head">
+    <div class="title-cour">
+        <h1>
+            {{cours.titre}}
+        </h1>
+    </div>
+</div>
+<div class="back" routerLink="/admin/listeCours">
+    <span class="iconify" data-icon="eva:arrow-back-outline" style="color: #ffff;" data-width="30" data-height="30"></span>
+</div>
+<div class="cours-content" [innerHTML] = cours.contenu>
+    {{cours.contenu}}
+</div>
+<div class="btn-group">
+    <button class="btn-2">Désaprouvé</button>
+    <button class="btn-1" (click)="changestatus(this.cours.id)">Approuvé</button>
+</div>
+<app-footer></app-footer>

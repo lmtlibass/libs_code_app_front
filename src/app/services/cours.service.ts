@@ -27,9 +27,12 @@ export class CoursService {
   getCoursNonValide(){
     return this.http.get(environment.api_url + 'coursA');
   }
-  showCoursNonValide(id: any){
-    return this.http.get(environment.api_url + 'coursA' + id);
+
+  //Mise à jours d'un cours
+  updateCours(id: number, cours: Cours): Observable<any>{
+    return this.http.put(environment.api_url + 'updatecours/'+ id, cours);
   }
+    
 
   //recuperer un cours par son id
   showCours(id: number){
@@ -39,4 +42,7 @@ export class CoursService {
    addCours(cours: Cours): Observable<any>{
     return this.http.post(environment.api_url + 'addcours', cours);
   }
+  
+  
+
 }

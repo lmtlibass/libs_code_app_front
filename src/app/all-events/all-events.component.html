@@ -12,24 +12,19 @@
        les Evenements
     </h1>
 </div>
-<div class="section-cours">
-    <div class="card" 
-        *ngFor="let Evenements of allEvenements"
-        (click)="showCours(this.Evenements.id)"
-        routerLink="/inscriptionevenement"
-        >
-        <div class="card-img">
-        <img src="../../../assets/images/phpimg.jpg" alt="evenements">
-           
-        </div>
-        <div class="card-title">
-            <h3>{{Evenements.titre_evenement}}</h3>
-        </div>
-        <div class="card-texte" >
-            <p>{{Evenements.description}}</p>
-        </div>
-        <div class="card-btn">
-        </div>
-    </div>
+<div class="section-events" >
+    <mat-card   class="card"   
+                *ngFor="let Evenements of allEvenements"
+                (click)="showCours(this.Evenements.id)"
+                routerLink="/inscriptionevenement"
+    >
+        <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+        <mat-card-title class="card-title">
+            {{Evenements.titre}}
+        </mat-card-title>
+        <mat-card-content>
+            {{Evenements.description}}
+        </mat-card-content>
+    </mat-card>
 </div>
 

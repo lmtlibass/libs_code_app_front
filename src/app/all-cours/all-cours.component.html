@@ -6,27 +6,21 @@
             <input type="text" placeholder="Rechercher un cours">
             <img src="../../assets/icones/search.png" alt="">
         </div>
-        <div class="cours-liste">
-            <div class="section-cours">
-                <div class="card" 
-                    *ngFor="let cours of allCours"
+        <div class="section-cours" >
+            <mat-card class="card"  *ngFor="let cours of allCours"
                     (click)="showCours(this.cours.id)"
                     routerLink="/cours"
-                >
-                    <div class="card-img">
-                    <img src="../../../assets/images/phpimg.jpg" alt="">
-                
-                    </div>
-                    <div class="card-title">
-                        <h3>{{cours.titre}}</h3>
-                    </div>
-                    <div class="card-texte" >
-                        <p>{{cours.description}}</p>
-                    </div>
-                    <div class="card-btn">
-                    </div>
-                </div>
-            </div>
+            >
+                <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+                <mat-card-title class="card-title">
+                    {{cours.titre}}
+                </mat-card-title>
+                <mat-card-content>
+                    {{cours.description}}
+                </mat-card-content>
+            </mat-card>
         </div>
+           
+        
     </div>
 </div>

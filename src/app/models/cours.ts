@@ -5,5 +5,4 @@ export class Cours {
     module_id!: any;
     description!: string;
     user_id!: any;
-
 }
