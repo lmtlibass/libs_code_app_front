@@ -20,7 +20,7 @@
     {{cours.contenu}}
 </div>
 <div class="btn-group">
-    <button class="btn-2">Désaprouvé</button>
+    <button class="btn-2" (click)="deleteCours(this.cours.id)">Désaprouvé</button>
     <button class="btn-1" (click)="changestatus(this.cours.id)">Approuvé</button>
 </div>
 <app-footer></app-footer>

@@ -42,6 +42,10 @@ export class CoursService {
    addCours(cours: Cours): Observable<any>{
     return this.http.post(environment.api_url + 'addcours', cours);
   }
+
+  deleteCours(id: number){
+    return this.http.delete(environment.api_url + 'deletecours/'+ id);
+  }
   
   
 

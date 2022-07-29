@@ -47,6 +47,15 @@ export class DetailCoursComponent implements OnInit {
       });
   }
 
+  //supprimer un cour
+  deleteCours(id: any){
+    return this.courService.deleteCours(id).subscribe(
+      (res)=>{
+        console.log(res);
+      }
+    )
+  }
+
 
 
 
