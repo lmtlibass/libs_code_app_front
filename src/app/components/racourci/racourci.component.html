@@ -21,7 +21,7 @@
     </div>
 </div>
 <!-- Demande Formateur Form -->
-<form  [formGroup]="demandeForm" [ngClass]='demandeClass'>
+<form  [formGroup]="demandeForm" [ngClass]='demandeClass' (ngSubmit)="storedemande()">
     <div class="close-form" (click)="close()">
         <img src="../../../assets/icones/close.png" alt="">
     </div>

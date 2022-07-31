@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Demande } from 'src/app/models/demande-formateur';
+import { DemandeFormateurService } from 'src/app/services/demande-formateur.service';
 
 @Component({
   selector: 'app-racourci',
@@ -37,13 +39,22 @@ export class RacourciComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private demandeF: DemandeFormateurService
   ) { 
     this.demandeForm = this.fb.group({
       telephone:  ['', Validators.required],
       motivation: ['', Validators.required],
     });
 
+  }
+
+  demande: Demande = {
+    prenom: 'Mamadou ',
+    nom: 'Lô',
+    motivation: '',
+    user_id: 1,
+    telephone: ''
   }
 
   ngOnInit(): void {
@@ -98,10 +109,28 @@ export class RacourciComponent implements OnInit {
         break;
   }
 
- 
-
 }
 
+  //enregistrer une demande
+  addDemande(){
+    return this.demandeF.addDemande(this.demande).subscribe(res => {
+        console.log(res);
+        res 
+          ?alert('enregistremnt effectuer avec succés')
+          :alert('quelque chose ne marche pas réessayer ultérieurement');
+        
+    })
+  }
+
+  //enregistrer une demande
+  storedemande(){
+   const data =  this.demandeForm.value;
+   this.demande.motivation = data.motivation;
+   this.demande.telephone  = data.telephone;
+   this.addDemande();
+   this.demandeForm.reset();
+   this.close();
+  }
 }
 
 
