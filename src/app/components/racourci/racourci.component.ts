@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Demande } from 'src/app/models/demande-formateur';
+import { Evenement } from 'src/app/models/evenement';
 import { DemandeFormateurService } from 'src/app/services/demande-formateur.service';
+import { EvenementsService } from 'src/app/services/evenements.service';
 
 @Component({
   selector: 'app-racourci',
@@ -34,21 +36,11 @@ export class RacourciComponent implements OnInit {
   active3 = '';
 
   demandeForm: FormGroup;
+  eventForm: FormGroup;
   demandeClass = 'demandeHiden';
+  evenementClass = 'evenementHiden';
 
-
-  constructor(
-    private fb: FormBuilder,
-    private router: Router,
-    private demandeF: DemandeFormateurService
-  ) { 
-    this.demandeForm = this.fb.group({
-      telephone:  ['', Validators.required],
-      motivation: ['', Validators.required],
-    });
-
-  }
-
+  
   demande: Demande = {
     prenom: 'Mamadou ',
     nom: 'Lô',
@@ -56,6 +48,33 @@ export class RacourciComponent implements OnInit {
     user_id: 1,
     telephone: ''
   }
+
+  evenements: Evenement = {
+    titre_evenement: '',
+    description: '',
+    date_evenement: new Date(),
+    etat: false,
+    user_id: 1
+  }
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private demandeF: DemandeFormateurService,
+    private evenementService: EvenementsService
+  ) { 
+    this.demandeForm = this.fb.group({
+      telephone:  ['', Validators.required],
+      motivation: ['', Validators.required],
+    });
+    this.eventForm = this.fb.group({
+      titre_evenement:  ['', Validators.required],
+      description:      ['', Validators.required],
+      date_evenement:   ['', Validators.required],
+    });
+  }
+
+  
 
   ngOnInit(): void {
     this.getData = this.showDemande();
@@ -88,6 +107,7 @@ export class RacourciComponent implements OnInit {
 
   close(){
     this.demandeClass = 'demandeHiden';
+    this.evenementClass = 'evenementHiden';
   }
 
    async redirect(){
@@ -105,7 +125,11 @@ export class RacourciComponent implements OnInit {
         }
         break;
       case 'Partager un événement':
-        window.location.href = 'https://www.formateur.com/evenement';
+        if(this.evenementClass === 'evenementHiden'){
+          this.evenementClass = 'evenementVisible';
+        }else{
+          this.evenementClass = 'evenementHiden';
+        }
         break;
   }
 
@@ -117,8 +141,7 @@ export class RacourciComponent implements OnInit {
         console.log(res);
         res 
           ?alert('enregistremnt effectuer avec succés')
-          :alert('quelque chose ne marche pas réessayer ultérieurement');
-        
+          :alert('quelque chose ne marche pas réessayer ultérieurement'); 
     })
   }
 
@@ -131,6 +154,34 @@ export class RacourciComponent implements OnInit {
    this.demandeForm.reset();
    this.close();
   }
+
+  //add evenement
+  addEvenement(){
+    this.evenementService.addEvenement(this.evenements).subscribe((res: any) => {
+      console.log(res);
+      res 
+        ?alert('enregistremnt effectuer avec succés')
+        :alert('quelque chose ne marche pas réessayer ultérieurement'); 
+    });
+  }
+
+  //enregistrer un evenement
+  storeEvenement(){
+    const events = this.eventForm.value;
+    this.evenements.titre_evenement = events.titre_evenement;
+    this.evenements.description = events.description;
+    this.evenements.date_evenement = events.date_evenement;
+    this.evenements.etat = false;
+    this.evenements.user_id = 1;
+    this.addEvenement();
+    this.eventForm.reset();
+    this.close();
+  }
+
+
+
+
+
 }
 
 

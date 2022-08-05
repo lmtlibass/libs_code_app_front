@@ -30,7 +30,7 @@ export class CoursService {
 
   //Mise à jours d'un cours
   updateCours(id: number, cours: Cours): Observable<any>{
-    return this.http.put(environment.api_url + 'updatecours/'+ id, cours);
+    return this.http.put(environment.api_url + 'cours/'+ id, cours);
   }
     
 
@@ -40,11 +40,11 @@ export class CoursService {
   }
    //ajouter un cours
    addCours(cours: Cours): Observable<any>{
-    return this.http.post(environment.api_url + 'addcours', cours);
+    return this.http.post(environment.api_url + 'cours', cours);
   }
 
   deleteCours(id: number){
-    return this.http.delete(environment.api_url + 'deletecours/'+ id);
+    return this.http.delete(environment.api_url + 'cours/'+ id);
   }
   
   

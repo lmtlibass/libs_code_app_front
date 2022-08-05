@@ -36,6 +36,7 @@ import { DetailCoursComponent } from './admin/detail-cours/detail-cours.componen
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

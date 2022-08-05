@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Cours } from 'src/app/models/cours';
+import { DemandeFormateurService } from 'src/app/services/demande-formateur.service';
+
 
 @Component({
   selector: 'app-liste-dem-formateur',
@@ -7,15 +8,23 @@ import { Cours } from 'src/app/models/cours';
   styleUrls: ['./liste-dem-formateur.component.css']
 })
 export class ListeDemFormateurComponent implements OnInit {
+demandes: any;
 
-
-  constructor() { }
+  constructor(
+    private demandesFormateur:  DemandeFormateurService
+  ) { }
 
   ngOnInit(): void {
+    this.index();
   }
 
-  showCours(id: any){
-
+  index(){
+    return this.demandesFormateur.demande().subscribe(
+      res => {
+        this.demandes = res;
+        console.log(this.demandes);
+        
+      });
   }
 
 }

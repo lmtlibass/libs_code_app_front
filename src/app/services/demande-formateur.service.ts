@@ -16,17 +16,17 @@ export class DemandeFormateurService {
 
   //enregistrer une demande
   addDemande(demande: Demande): Observable<any>{
-    return this.http.post(environment.api_url + 'addemande', demande);
+    return this.http.post(environment.api_url + 'demandes', demande);
   }
 
   //lister les demandes 
   demande(){
-    return this.http.get(environment.api_url + 'demande');
+    return this.http.get(environment.api_url + 'demandes');
   }
 
   //supprimer une demande 
   deleteDemande(id: number){
-    return this.http.delete(environment.api_url + 'deleteDemande/' + id)
+    return this.http.delete(environment.api_url + 'demandes/' + id)
   }
 
 }

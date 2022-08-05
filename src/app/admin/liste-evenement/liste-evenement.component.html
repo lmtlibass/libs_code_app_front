@@ -19,18 +19,21 @@
                         {{evenement.description}}
                      </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                      <button type="button" class="btn btn-light" (click)="validerEvenement(this.evenement.id)">Valider</button>
+                      <button type="button" class="btn btn-light" (click)="deleteEvenement(this.evenement.id)">Invalider</button>
                     </div>
                 </ng-template>
-                <mat-card class="card"  (click)="openScrollableContent(longContent)">
-                    <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
-                    <mat-card-title class="card-title">
-                        {{evenement.titre}}
-                    </mat-card-title>
-                    <mat-card-content>
-                        {{evenement.description}}
-                    </mat-card-content>
-                </mat-card>
+                <div class="section-card">
+                    <mat-card class="card"  (click)="openScrollableContent(longContent)">
+                        <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+                        <mat-card-title class="card-title">
+                            {{evenement.titre_evenement}}
+                        </mat-card-title>
+                        <mat-card-content>
+                            {{evenement.description | slice:0:100}} <pre>...</pre>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
                 
                 
             </div> 

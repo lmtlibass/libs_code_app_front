@@ -1,0 +1,48 @@
+
+.menu{
+    margin-left: -4%;
+}
+.titre{
+    margin: 4% 50%;
+    width: 500px;
+}
+.titre h1{
+    font-size: 30px;
+    color: #007878;
+    margin-top: 20px;
+    font-family: roboto;
+    font-size: 24px;
+}
+.th{
+    background-color: #007878;
+    padding: 8px;
+    border-radius: 5px;
+    width: 90px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+.Demandes{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;   
+}
+.table-demandes{
+    width: 90%;
+    overflow: auto;
+    font-size: smaller;
+
+}
+.td-detail{
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+.icone:hover{
+    color: #fff !important;
+    width: 35px !important;
+    transform: rotate(360deg) !important;
+    transition: 1s;
+}

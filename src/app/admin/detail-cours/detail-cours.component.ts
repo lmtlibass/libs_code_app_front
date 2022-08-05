@@ -35,7 +35,7 @@ export class DetailCoursComponent implements OnInit {
   //modifier statut du cours
   changestatus(id: any){
     return this.courService.showCours(id).subscribe(
-      (res)=>{
+      (res)=> {
         this.cours = res;
         this.cours.statut = this.cours.statut + 1;
 
@@ -55,8 +55,6 @@ export class DetailCoursComponent implements OnInit {
       }
     )
   }
-
-
 
 
 
