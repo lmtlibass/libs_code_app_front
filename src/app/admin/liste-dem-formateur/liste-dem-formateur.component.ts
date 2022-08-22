@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DemandeFormateurService } from 'src/app/services/demande-formateur.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,9 +10,11 @@ import { DemandeFormateurService } from 'src/app/services/demande-formateur.serv
 })
 export class ListeDemFormateurComponent implements OnInit {
 demandes: any;
+unedemande: any;
 
   constructor(
-    private demandesFormateur:  DemandeFormateurService
+    private demandesFormateur:  DemandeFormateurService,
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -26,5 +29,32 @@ demandes: any;
         
       });
   }
+
+  show($id: number){
+    return this.demandesFormateur.show($id).subscribe(
+      res => {
+        this.unedemande = res;
+        console.log(this.demandes);
+        
+      });
+  }
+
+  //ouvrir la fenetre de validation de l'evenement
+  openScrollableContent(id:number, longContent: any) {
+    this.show(id);
+    this.modalService.open(longContent, { scrollable: true });
+  }
+
+  //Valider demande 
+  validerDemande(id: number){
+    console.log('demande valider');
+  }
+
+  //Invalider Demande 
+  deleteDemande(id: number){
+    console.log('demande invalider');
+  }
+
+
 
 }

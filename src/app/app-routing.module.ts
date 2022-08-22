@@ -13,11 +13,23 @@ import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-de
 import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
+import { HasRoleGuard } from './guards/has-role.guard';
+
 
 const routes: Routes = [
-  { path: '', component: AccueilComponent},
-  { path: 'allcours', component: AllCoursComponent},
-  { path: 'cours', component: CoursComponent},
+  { path: '', component: AccueilComponent },
+ 
+  { 
+    path: 'allcours', component: AllCoursComponent, 
+    canActivate: [HasRoleGuard], 
+    data: { role: "createur"}
+  },
+
+  { 
+    path: 'cours', component: CoursComponent,
+    canActivate: [HasRoleGuard],
+    data: { role: 'user' }
+  },
   { path: 'allevenements', component: AllEventsComponent},
   { path: 'inscriptionevenement', component: InscriptionEvenementComponent},
   { path: 'espaceuser', component: EspaceUserComponent},
@@ -41,3 +53,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
+

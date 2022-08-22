@@ -45,12 +45,25 @@
                         <td>{{demande.nom}}</td>
                         <td>{{demande.telephone}}</td>
                         <td>{{demande.motivation}}</td>
-                        <td class="td-detail">
+                        <td class="td-detail" (click)="openScrollableContent(this.demande.id, longContent)">
                             <span class="iconify icone" data-icon="clarity:eye-show-line" style="color: #007878;" data-width="30" data-height="30"></span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <ng-template #longContent let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title">{{unedemande.prenom}}</h4>
+              <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+                {{unedemande.nom}}
+             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" (click)="validerDemande(this.unedemande.id)">Valider</button>
+              <button type="button" class="btn btn-light" (click)="deleteDemande(this.unedemande.id)">Invalider</button>
+            </div>
+        </ng-template>
     </div>
 </div>

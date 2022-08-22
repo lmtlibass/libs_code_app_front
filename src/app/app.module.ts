@@ -25,7 +25,7 @@ import { InscriptionEvenementComponent } from './inscription-evenement/inscripti
 import { EspaceUserComponent } from './espace-user/espace-user.component';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { AddCoursComponent } from './add-cours/add-cours.component';
-import {MatDialogModule, } from '@angular/material/dialog';
+import {MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { ListeDemFormateurComponent } from './admin/liste-dem-formateur/liste-dem-formateur.component';
 import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement.component';

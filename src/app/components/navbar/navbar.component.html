@@ -1,5 +1,5 @@
 <div class="nav-bar">
-    <div class="logo">
+    <div class="logo" routerLink="/">
         <div class="icone-logo">
             <img src="../../../assets/icones/home.png" alt="">
         </div>
@@ -27,11 +27,13 @@
         </div>
     </div>
 </div>
+
 <!-- Login Form -->
 
 <form  [formGroup]="connexionform" [ngClass]='loginForm'  (ngSubmit)="onLogin()">
     <div *ngIf="errors?.email" class="alert alert-danger mt-3">
         {{ errors?.email }}
+        email note found
     </div>
     <div *ngIf="errors?.password" class="alert alert-danger mt-3">
         {{ errors?.password }}

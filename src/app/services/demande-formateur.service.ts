@@ -29,4 +29,9 @@ export class DemandeFormateurService {
     return this.http.delete(environment.api_url + 'demandes/' + id)
   }
 
+  //recupere une seule demande
+  show(id: number){
+    return this.http.get(environment.api_url + 'demandes/' + id);
+  }
+
 }

@@ -56,8 +56,10 @@ export class NavbarComponent implements OnInit {
   //login
   onLogin(){
     this.authService.signin(this.connexionform.value).subscribe(
-      (result) => {
-        this.responseHandler(result);
+      
+      (result) => {   
+        console.log(this.authService.currentAccesToken);
+        //
       },
       (error) => {
         this.errors = error.error;
@@ -69,9 +71,11 @@ export class NavbarComponent implements OnInit {
       }
     );
   }
-  responseHandler(data:any) {
-    this.token.handleData(data.access_token);
-  }
+  // responseHandler(data:any) {
+  //   console.log(data.access_token);
+  //   this.token.handleData(data.access_token);
+    
+  // }
 
   //register
   onRegister(){

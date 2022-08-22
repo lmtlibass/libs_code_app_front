@@ -34,6 +34,7 @@ export class TokenService {
       return false;
     }
   }
+  
   payload(token: any) {
     const jwtPayload = token.split('.')[1];
     return JSON.parse(atob(jwtPayload));
@@ -41,7 +42,12 @@ export class TokenService {
 
    // User state based on valid token
    isLoggedIn() {
+    localStorage.getItem('auth_token') ? true : false;
     return this.isValidToken();
+  }
+  //get user role
+  getUserRole() {
+    localStorage.getItem('role');
   }
   // Remove token
   removeToken() {
