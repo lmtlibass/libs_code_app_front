@@ -21,11 +21,10 @@ export class HasRoleGuard implements CanActivate {
       const userRole    = route.data['role'];
 
       
-      if(userRole != role){
-        console.log(role);
-        
-      window.alert('You are not allowed to access this page');
-      this.router.navigate(['']);
+      if(userRole !== role){
+        console.log(role);  
+        window.alert('You are not allowed to access this page');
+        this.router.navigate(['']);
       } 
       return true;
       

@@ -22,24 +22,67 @@ const routes: Routes = [
   { 
     path: 'allcours', component: AllCoursComponent, 
     canActivate: [HasRoleGuard], 
-    data: { role: "createur"}
   },
 
   { 
     path: 'cours', component: CoursComponent,
     canActivate: [HasRoleGuard],
-    data: { role: 'user' }
   },
-  { path: 'allevenements', component: AllEventsComponent},
-  { path: 'inscriptionevenement', component: InscriptionEvenementComponent},
-  { path: 'espaceuser', component: EspaceUserComponent},
-  { path: 'addcours', component: AddCoursComponent},
+  { 
+    path: 'allevenements', component: AllEventsComponent, 
+    canActivate: [HasRoleGuard],
+  },
+  { 
+    path: 'inscriptionevenement', component: InscriptionEvenementComponent,
+    canActivate: [HasRoleGuard],
+  },
+  { 
+    path: 'espaceuser', component: EspaceUserComponent,
+    canActivate: [HasRoleGuard],
+  },
+  { 
+    path: 'addcours', component: AddCoursComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "createur"
+    }
+  },
   //admin
-  { path: 'admin/listeCours', component: ListeCoursComponent},
-  { path: 'admin/listeDemFormateur', component: ListeDemFormateurComponent},
-  { path: 'admin/listeEvenement', component: ListeEvenementComponent},
-  { path: 'admin/listeUser', component: ListeUserComponent},
-  { path: 'admin/detailCours', component:DetailCoursComponent},
+  { 
+    path: 'admin/listeCours', component: ListeCoursComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "admin"
+    }
+  },
+  { 
+    path: 'admin/listeDemFormateur', component: ListeDemFormateurComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "admin"
+    }
+  },
+  { 
+    path: 'admin/listeEvenement', component: ListeEvenementComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "admin"
+    }
+  },
+  { 
+    path: 'admin/listeUser', component: ListeUserComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "admin"
+    }
+  },
+  { 
+    path: 'admin/detailCours', component:DetailCoursComponent,
+    canActivate: [HasRoleGuard],
+    data: {
+      role: "admin"
+    }
+  },
   { path: '**', redirectTo: '' }
  
 ]
