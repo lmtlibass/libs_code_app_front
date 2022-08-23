@@ -88,14 +88,14 @@ h2
 }
 .inter-section
 {
+    background-image: url('../../assets/images/section.png');
     z-index: 1;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 70%;
-    margin-left: 10%;
-    margin-top: -45%;
+    width: 100%;
+    padding: 10%;
 }
 .inter-section .text-section
 {
@@ -187,9 +187,9 @@ h2
     color: #610141;
     transition: 2s;
 }
+/* ******************************************** */
 
-
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 900px){
     .all-events
     {
         background: rgb(0,120,120);
@@ -206,6 +206,46 @@ h2
         margin-right: 192px;
         margin-top: 2%;
         float: right;
+    }
+    .inter-section
+    {
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10%;
+        
+        
+    }
+    .inter-section .text-section
+    {
+        color: #ffff;
+
+    }
+    .inter-section .text-section h1
+    {
+        font-size: 25px;
+        font-family: roboto;
+        text-align: center;
+        line-height: 52px;
+        
+    }
+    .inter-section .text-section p
+    {
+    text-align: center;
+    font-size: 15px;
+    }
+    .inter-section .btn-section button
+    {
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 3%;
+        border: 1px #007878 solid;
     }
     
 }
