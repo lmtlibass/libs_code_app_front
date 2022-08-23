@@ -1,4 +1,18 @@
 <div class="section-racourci">
+     <!-- Mobiles bn -->
+
+     <div class="btns-section-mobile col-sm-12 col-md-12     ">
+        <div class="d-formateur" (click)="showDemande()" [ngClass]='active1'>
+            <h4>devenir formateur</h4>
+        </div>
+        <div class="d-formateur" (click)="showAccesEspace()" [ngClass]='active2'>
+            <h4>acceder a mon espace</h4>
+        </div>
+        <div class="d-formateur" (click)="showEvenement()" [ngClass]='active3'>
+            <h4>partager evenement</h4>
+        </div>
+    </div>
+    <!--  -->
     <div class="desc-section"  *ngFor="let dataSections of getData">
         <h3>{{dataSections.title}}</h3>
         <p>
@@ -19,6 +33,10 @@
             <h4>partager evenement</h4>
         </div>
     </div>
+
+   
+
+
 </div>
 <!-- Demande Formateur Form -->
 <form  [formGroup]="demandeForm" [ngClass]='demandeClass' (ngSubmit)="storedemande()">

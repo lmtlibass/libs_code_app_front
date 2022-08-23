@@ -1,36 +1,41 @@
-        <app-navbar></app-navbar>
+       
+            <app-navbar></app-navbar>
         <div class="bar-menu">
             <ul class="acueil-ul">
                 <li><a routerLink="/allcours" routerLinkActive="active">Cours</a></li>
                 <li><a routerLink="/allevenements" routerLinkActive="active">Evenements</a></li>
             </ul>
         </div>
-        <div class="intro-section">
-            <div class="citation">
+        <div class="row w-100 d-flex intro-section ">
+            <div class="citation col-sl-12 col-md-12 col-lg-6">
                 <p>
                     L'intelligence n'est pas la capacité de stocker <br>
                     des informations, mais de savoir où les trouver.
                 </p>
             </div>
-            <div class="logo-img">
+            <div class="logo-img col-sl-12 col-md-12 col-lg-6">
                 <img src="../../assets/images/iconedev.png" alt="">
             </div>
         </div>
         <div class="title-sectio">
             <h2>Cours les plus Suivis</h2>
         </div>
-        <app-cards>
+        <div class="cours-card">
+            <app-cards>
             
-        </app-cards>
-        <div class="all-cours mt-5 mb-5" routerLink="/allcours">
+            </app-cards>
+        </div>
+        <div class="all-events mt-5 mb-5" routerLink="/allcours">
             <p>Voir tous</p>
         </div>
         <div class="title-sectio p-5 mt-5">
             <h2>Derniers Evenements</h2>
         </div>
-        <app-evenement-card>
+        <div class="evenement-card">
+            <app-evenement-card>
 
-        </app-evenement-card>
+            </app-evenement-card>
+        </div>
         <div class="all-events mt-5 mb-5" routerLink="/allevenements">
             <p>Voir tous</p>
         </div>
@@ -57,3 +62,5 @@
         <app-racourci></app-racourci>
 
         <app-footer></app-footer>
+
+       

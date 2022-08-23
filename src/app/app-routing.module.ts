@@ -14,6 +14,8 @@ import { ListeEvenementComponent } from './admin/liste-evenement/liste-evenement
 import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
 import { HasRoleGuard } from './guards/has-role.guard';
+import { AdminUserGuard } from './guards/admin-user.guard';
+import { RoleUserGuard } from './guards/role-user.guard';
 
 
 const routes: Routes = [
@@ -21,67 +23,57 @@ const routes: Routes = [
  
   { 
     path: 'allcours', component: AllCoursComponent, 
-    canActivate: [HasRoleGuard], 
+    canActivate: [RoleUserGuard]
+    
   },
 
   { 
     path: 'cours', component: CoursComponent,
-    canActivate: [HasRoleGuard],
+    canActivate: [RoleUserGuard],
+    
   },
   { 
     path: 'allevenements', component: AllEventsComponent, 
-    canActivate: [HasRoleGuard],
+    canActivate: [RoleUserGuard],
   },
   { 
     path: 'inscriptionevenement', component: InscriptionEvenementComponent,
-    canActivate: [HasRoleGuard],
+    canActivate: [RoleUserGuard],
   },
   { 
     path: 'espaceuser', component: EspaceUserComponent,
-    canActivate: [HasRoleGuard],
+    canActivate: [RoleUserGuard],
   },
   { 
     path: 'addcours', component: AddCoursComponent,
     canActivate: [HasRoleGuard],
-    data: {
-      role: "createur"
-    }
+  
   },
   //admin
   { 
     path: 'admin/listeCours', component: ListeCoursComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: "admin"
-    }
+    canActivate: [AdminUserGuard],
+    
   },
   { 
     path: 'admin/listeDemFormateur', component: ListeDemFormateurComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: "admin"
-    }
+    canActivate: [AdminUserGuard],
+    
   },
   { 
     path: 'admin/listeEvenement', component: ListeEvenementComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: "admin"
-    }
+    canActivate: [AdminUserGuard],
+   
   },
   { 
     path: 'admin/listeUser', component: ListeUserComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: "admin"
-    }
+    canActivate: [AdminUserGuard],
+  
   },
   { 
     path: 'admin/detailCours', component:DetailCoursComponent,
-    canActivate: [HasRoleGuard],
-    data: {
-      role: "admin"
-    }
+    canActivate: [AdminUserGuard],
+    
   },
   { path: '**', redirectTo: '' }
  

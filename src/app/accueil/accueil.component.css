@@ -1,11 +1,12 @@
+
 .bar-menu
 {
     width: 90%;
     background-color: #007878;
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 3%;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .bar-menu .acueil-ul
 {
@@ -13,8 +14,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 25%;
+    width: 45%;
     margin: 0 auto;
+   
 }
 .bar-menu .acueil-ul li
 {
@@ -23,8 +25,9 @@
 .bar-menu .acueil-ul li a
 {
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .bar-menu .acueil-ul li a:hover
 {
@@ -35,34 +38,33 @@
 
 .intro-section 
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 0px;
+    margin: 0 auto;
+    z-index: 0;
 }
 .intro-section .citation p
 {
-    font-size: 25px;
+    font-size: 20px;
     font-family: Baskervville;
-    padding: 25px;
     margin-top: 16%;
     margin-left: 40px;
     line-height: 42px;
 }
 .intro-section .logo-img img
 {
-    width: 65%;
-    padding-top: 7%;
+    width: 55%;
+    /* padding-top: 7%; */
+    margin-left: 19%;
     
 }
 .intro-section .logo-img img:hover
 {
-    width: 60%;
+    transform: rotate(10deg);
     transition: 1s;
 }
 .title-sectio
 {
     text-align: center;
+    /* margin-top: 12%; */
 }
 h2
 {
@@ -186,7 +188,24 @@ h2
     transition: 2s;
 }
 
-@media only screen and (max-width: 600px){
 
+@media only screen and (max-width: 800px){
+    .all-events
+    {
+        background: rgb(0,120,120);
+        background: linear-gradient(90deg, rgba(0,120,120,0.8552463221616772) 16%,  rgba(100, 0, 90, 0.783) 100%);
+        padding: 10px;
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        height: 30px;
+        width: 20%;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 192px;
+        margin-top: 2%;
+        float: right;
+    }
     
 }

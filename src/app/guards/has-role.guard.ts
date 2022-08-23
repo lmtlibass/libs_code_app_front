@@ -16,17 +16,19 @@ export class HasRoleGuard implements CanActivate {
      | Promise<boolean | UrlTree> 
      | boolean | UrlTree {
     
-      // const isLoggedIn = this.tokenService.isLoggedIn();    
+      //const isLoggedIn = this.tokenService.isLoggedIn();    
       const role       = localStorage.getItem('role');
-      const userRole    = route.data['role'];
+      // const userRole    = route.data['role'];
 
       
-      if(userRole !== role){
-        console.log(role);  
+      if(role === 'createur' || role === 'admin'){
+        
+        return true;
+      } 
+      console.log(role);  
         window.alert('You are not allowed to access this page');
         this.router.navigate(['']);
-      } 
-      return true;
+        return false
       
   }
   
