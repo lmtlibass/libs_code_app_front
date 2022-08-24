@@ -21,7 +21,7 @@ export class AdminUserGuard implements CanActivate {
           timeOut: 3000,
         });
         
-        this.router.navigate(['']);
+        this.router.navigate(['/']);
       }
       return true;
   }

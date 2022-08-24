@@ -26,7 +26,7 @@ export class RoleUserGuard implements CanActivate {
       this.toastr.error('Accés réfusé!!! Merci de consulter les CGU', 'Authentification Error', {
         timeOut: 3000,
       });
-      this.router.navigate(['']);
+      this.router.navigate(['/']);
       return false
   }
   
