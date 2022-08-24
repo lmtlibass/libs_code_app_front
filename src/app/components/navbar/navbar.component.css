@@ -167,7 +167,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 
 .registerFormHidden
@@ -177,3 +177,30 @@
     transform-origin: right;
     transition: 1s;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+      width: 100%;
+      margin: auto;
+      padding: auto;
+    }
+    .registerFormVisible{
+        margin: 0 auto !important;
+        margin-left: 16% !important;
+        margin-top: -40% !important;
+        
+
+    }
+    .loginFormVisible{
+        margin: 0 auto;
+        margin-left: 13%;
+        margin-top: -40%;
+    }
+    .close-form img
+    {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: -112px !important;
+    }
+  }

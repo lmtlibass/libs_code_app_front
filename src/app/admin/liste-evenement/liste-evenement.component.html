@@ -26,11 +26,16 @@
                 <div class="section-card">
                     <mat-card class="card"  (click)="openScrollableContent(longContent)">
                         <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
-                        <mat-card-title class="card-title">
-                            {{evenement.titre_evenement}}
+                        <mat-card-title class="card-title d-flex flex-column">
+                            <div class="h6">
+                                {{evenement.titre_evenement}}
+                            </div>
+                            <div class="h6 bg-danger text-light rounded-30 p-2">
+                                {{evenement.date_evenement| date: 'dd/MM/yyyy' }}
+                            </div>
                         </mat-card-title>
                         <mat-card-content>
-                            {{evenement.description | slice:0:100}} <pre>...</pre>
+                            {{evenement.description | slice:0:50}} <pre>...</pre>
                         </mat-card-content>
                     </mat-card>
                 </div>

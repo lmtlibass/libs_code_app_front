@@ -54,11 +54,19 @@
         </div>
         <ng-template #longContent let-modal>
             <div class="modal-header">
-              <h4 class="modal-title">{{unedemande.prenom}}</h4>
+              <h4 class="modal-title h4"> Merci de bien étudier la demande avant validation 🦹 </h4>
               <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
             </div>
             <div class="modal-body">
-                {{unedemande.nom}}
+                <div class="h5">
+                   Prenom: {{unedemande.prenom}}
+                </div>
+                <div class="h5">
+                  Nom:  {{unedemande.nom}}
+                </div>
+                <div class="p">
+                    {{unedemande.motivation}}
+                </div>
              </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-light" (click)="validerDemande(this.unedemande.id)">Valider</button>

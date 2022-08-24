@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cours } from 'src/app/models/cours';
 import { CoursService } from 'src/app/services/cours.service';
 import { StorageService } from 'src/app/services/storage.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-detail-cours',
@@ -15,7 +16,8 @@ export class DetailCoursComponent implements OnInit {
 
   constructor(
     private courService: CoursService,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -43,6 +45,7 @@ export class DetailCoursComponent implements OnInit {
           (res)=>{
             console.log(res);
           });
+          this.toastr.success('Valisation réussi!', 'Valider Cours')
         console.log(this.cours.statut);
       });
   }
@@ -52,8 +55,10 @@ export class DetailCoursComponent implements OnInit {
     return this.courService.deleteCours(id).subscribe(
       (res)=>{
         console.log(res);
+        this.toastr.info('Ce cours à été invalidé !')
       }
-    )
+      )
+      
   }
 
 

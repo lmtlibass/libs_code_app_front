@@ -66,7 +66,7 @@ const routes: Routes = [
    
   },
   { 
-    path: 'admin/listeUser', component: ListeUserComponent,
+    path: ' ', component: ListeUserComponent,
     canActivate: [AdminUserGuard],
   
   },

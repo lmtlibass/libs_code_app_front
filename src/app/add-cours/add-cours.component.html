@@ -20,21 +20,23 @@
                 [(ngModel)]="cours.titre"
                 name="titre"
             >
-            <textarea 
+            <input 
             [(ngModel)]="cours.description"
                 name="description" 
-                id="" 
-                cols="30" 
-                rows="5" 
+                type="text"  
                 placeholder="Donner une description"
-            ></textarea>
+            >
         </div>
         <div class="editeeur-section">
-            <ckeditor
+            <!-- <ckeditor
                 [(ngModel)]="ckeditorContent"
                 
             >
-            </ckeditor> 
+            </ckeditor>  -->
+            <angular-editor 
+                [placeholder]="'Enter text here...'" 
+                [(ngModel)]="ckeditorContent">
+            </angular-editor>
         </div>
         <div class="bnt">
             <button (click)="save()">

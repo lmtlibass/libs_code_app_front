@@ -3,12 +3,16 @@ import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } fro
 import { Observable } from 'rxjs';
 import { TokenService } from '../services/token.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class HasRoleGuard implements CanActivate {
-  constructor(private tokenService: TokenService, private router: Router){}
+  constructor(private tokenService: TokenService, private router: Router, private toastr: ToastrService){
+  
+  }
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot):
@@ -26,7 +30,9 @@ export class HasRoleGuard implements CanActivate {
         return true;
       } 
       console.log(role);  
-        window.alert('You are not allowed to access this page');
+      this.toastr.error('Accés réfusé!!! Merci de consulter les CGU', 'Authentification Error', {
+        timeOut: 3000,
+      });
         this.router.navigate(['']);
         return false
       

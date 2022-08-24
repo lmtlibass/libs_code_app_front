@@ -3,7 +3,7 @@ import  { Cours }              from '../models/cours';
 import  { CoursService }       from '../services/cours.service';
 import  { MatDialog }          from  '@angular/material/dialog' ;
 import  { DomSanitizer }       from '@angular/platform-browser';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-add-cours',
   templateUrl: './add-cours.component.html',
@@ -24,7 +24,9 @@ export class AddCoursComponent implements OnInit {
   constructor(
     private coursService: CoursService,
     public dialog: MatDialog,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private toastr: ToastrService
+    
   ) { }
 
   ngOnInit(): void {
@@ -33,7 +35,7 @@ export class AddCoursComponent implements OnInit {
   save(){
     this.cours.titre       = this.cours.titre;
     this.cours.contenu     = this.ckeditorContent;
-    this.cours.statut      = 1;
+    this.cours.statut      = 0;
     this.cours.module_id   = 1;
     this.cours.description = this.cours.description;
     this.cours.user_id     = 1 
@@ -42,10 +44,13 @@ export class AddCoursComponent implements OnInit {
     console.log(this.cours);
     
     this.addCours();
-    this.openDialog();
-    // console.log(this.cours);
-   
-    
+    this.toastr.success('Votre cours'+ this.cours.titre +' ' + ' est ajouté avec succés', 'Success Message', {
+      timeOut: 3000,
+    });
+    this.cours.titre       = '';
+    this.cours.description = '';
+    this.ckeditorContent   = '';
+
   }
 
   addCours(): any{
@@ -54,10 +59,7 @@ export class AddCoursComponent implements OnInit {
     });
   }
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
-    
-  }
+
 
  
 
@@ -65,12 +67,3 @@ export class AddCoursComponent implements OnInit {
 
 }
 
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: './dialog-success.html',
-})
-export class DialogElementsExampleDialog {
-  reload(){
-    return window.location.reload();
-  }
-}

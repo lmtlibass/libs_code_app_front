@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { EvenementsService } from '../../services/evenements.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Evenement } from 'src/app/models/evenement';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-liste-evenement',
   templateUrl: './liste-evenement.component.html',
@@ -15,7 +16,8 @@ export class ListeEvenementComponent implements OnInit {
 
   constructor(
     private evenementService: EvenementsService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private toastr: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -51,6 +53,7 @@ export class ListeEvenementComponent implements OnInit {
             console.log(res);
           });
           console.log(this.evenement.etat);
+          this.toastr.success('Evenement Validé avec succés!')
           
           // this.evenement.etat = 1 ?alert('evenement valider') : alert('evenement non valider');
     });
@@ -62,7 +65,7 @@ export class ListeEvenementComponent implements OnInit {
     this.modalService.dismissAll();
     return this.evenementService.deleteEvenement(id).subscribe(
       (res) => {
-        
+        this.toastr.info('Cet événement n\'à pas été invalidé!')
       });
   }
 

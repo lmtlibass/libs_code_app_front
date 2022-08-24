@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import { CardsComponent } from './components/cards/cards.component';
@@ -23,7 +21,6 @@ import { AuthInterceptor } from 'auth.interceptor';
 import { AllEventsComponent } from './all-events/all-events.component';
 import { InscriptionEvenementComponent } from './inscription-evenement/inscription-evenement.component';
 import { EspaceUserComponent } from './espace-user/espace-user.component';
-import { CKEditorModule } from 'ng2-ckeditor';
 import { AddCoursComponent } from './add-cours/add-cours.component';
 import {MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
@@ -34,7 +31,11 @@ import { ListeUserComponent } from './admin/liste-user/liste-user.component';
 import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
 import { DetailCoursComponent } from './admin/detail-cours/detail-cours.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 @NgModule({
@@ -61,20 +62,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ListeCoursComponent,
     ListeUserComponent,
     SidebarAdminComponent,
-    DetailCoursComponent
+    DetailCoursComponent,
   ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     MatIconModule,
-    HttpClientModule,
+    HttpClientModule, 
+    AngularEditorModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     CKEditorModule,
     MatDialogModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

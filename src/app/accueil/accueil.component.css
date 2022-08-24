@@ -95,6 +95,7 @@ h2
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-top: 10% !important;
     padding: 10%;
 }
 .inter-section .text-section
@@ -190,6 +191,12 @@ h2
 /* ******************************************** */
 
 @media only screen and (max-width: 900px){
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        margin: auto;
+        padding: auto;
+    }
     .all-events
     {
         background: rgb(0,120,120);
@@ -204,7 +211,7 @@ h2
         border-radius: 5px;
         cursor: pointer;
         margin-right: 192px;
-        margin-top: 2%;
+        margin-bottom: 2%;
         float: right;
     }
     .inter-section
@@ -215,10 +222,10 @@ h2
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        margin-top: 15% !important;
         width: 100%;
         padding: 10%;
-        
-        
+ 
     }
     .inter-section .text-section
     {

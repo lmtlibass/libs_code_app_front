@@ -6,7 +6,7 @@
             {{courdesc.titre}}
         </mat-card-title>
         <mat-card-content class="card-content">
-            {{courdesc.description}}
+            {{courdesc.description | slice:0:70}}
         </mat-card-content>
     </mat-card>
 </div>

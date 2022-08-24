@@ -17,7 +17,7 @@
 }
 .mail .mail-footer
 {
-    width: 400px;
+    width: 60%;
     height: 40px;
     margin-top: 7%;
     border-radius: 20px;
@@ -88,4 +88,32 @@ input::placeholder
 .copiright 
 {
     margin-top: 30px;
+}
+/* *************************** */
+@media only screen and (max-width: 900px){
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        margin: auto;
+        padding: auto;
+    }
+    .mail .mail-footer
+    {
+    width: 60%;
+    height: 40px;
+    margin-top: 20%;
+    border-radius: 20px;
+    border: #007878;
+    }
+   
+    .mail img
+    {
+    margin-left: -60px;
+    margin-top: 20.5%;
+    background-color: #007878;
+    padding: 5px;
+    position: absolute;
+    border-radius: 100px;
+    cursor: pointer;
+    }
 }

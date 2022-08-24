@@ -8,20 +8,22 @@
         <div class="titre">
             <h1>Liste des Cours</h1>
         </div>
-        <div class="card-cours"*ngFor="let cours of coursNonValide">
-            <mat-card 
-                class="card" 
-                (click)="showCours(this.cours.id)"
-                routerLink="/admin/detailCours"  
-            >
-                <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
-                <mat-card-title class="card-title">
-                    {{cours.titre}}
-                </mat-card-title>
-                <mat-card-content>
-                    {{cours.description}}
-                </mat-card-content>
-            </mat-card>
-        </div> 
+        <div class="cours-cards d-flex flex-row flax-wrap justify-content-between">
+            <div class="card-cours" *ngFor="let cours of coursNonValide">
+                <mat-card 
+                    class="card ml-3" 
+                    (click)="showCours(this.cours.id)"
+                    routerLink="/admin/detailCours"  
+                >
+                    <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+                    <mat-card-title class="card-title">
+                        {{cours.titre}}
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{cours.description |  slice:0:100}}
+                    </mat-card-content>
+                </mat-card>
+            </div> 
+        </div>
     </div>
 </div>
