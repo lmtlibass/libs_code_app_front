@@ -12,9 +12,18 @@
     padding: 20px;
     margin-top: 10px;
 }
-.card-title{
+.card-title h6{
     color: #007878;
-    font-size: 20px;
+    font-size: 15px;
+}
+.card-title .date{
+    background-color: #780000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
 }
 .card{
     width: 23%;

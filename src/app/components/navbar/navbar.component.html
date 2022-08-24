@@ -1,46 +1,29 @@
-<div class="nav-bar">
-    <div class="logo" routerLink="/">
-        <div class="icone-logo">
-            <img src="../../../assets/icones/home.png" alt="">
-        </div>
-        <div class="title-logo">
-            <p><span id="libs">Libs</span><span id="code">Code</span></p>
-        </div>
+
+
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <a routerLink="/" class=" col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="../../../assets/images/logs.png" alt="" class="logo"   role="img" >
+    </a>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li> <img class="logo-rs" src="../../../assets/icones/facebook.png" alt=""></li>
+      <li><img class="logo-rs" src="../../../assets/icones/instgramme.png" alt=""></li>
+      <li><img class="logo-rs" src="../../../assets/icones/linkedin.png" alt=""></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-connexion me-2" (click)="ShowModalLogin()">Connexion</button>
+      <button type="button" class="btn btn-connexion" (click)="showRegister()">Inscription</button>
     </div>
-    <div class="rs">
-        <div class="afcebook">
-            <img class="logo-rs" src="../../../assets/icones/facebook.png" alt="">
-        </div>
-        <div class="ig">
-            <img class="logo-rs" src="../../../assets/icones/instgramme.png" alt="">
-        </div>
-        <div class="linkedin">
-            <img class="logo-rs" src="../../../assets/icones/linkedin.png" alt="">
-        </div>
-    </div>
-    <div class="btn-navbar">
-        <div class="btn-connexion" (click)="ShowModalLogin()">
-            <p>connexion</p>
-        </div>
-        <div class="btn-connexion" (click)="showRegister()">
-            <p>inscription</p>
-        </div>
-    </div>
+  </header>
 </div>
 
 <!-- Login Form -->
 
 <form  [formGroup]="connexionform" [ngClass]='loginForm'  (ngSubmit)="onLogin()">
-    <div *ngIf="errors?.email" class="alert alert-danger mt-3">
-        {{ errors?.email }}
-        email note found
-    </div>
-    <div *ngIf="errors?.password" class="alert alert-danger mt-3">
-        {{ errors?.password }}
-    </div>
-    <div *ngIf="errors?.error" class="alert alert-danger mt-3">
-        {{ errors?.error }}
-    </div>
+    
+    
     <div class="close-form" (click)="close()">
         <img src="../../../assets/icones/close.png" alt="">
     </div>
@@ -55,12 +38,22 @@
     <div>
       <input class="input" placeholder="email" formControlName="email">
     </div>
+    <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+      {{ errors?.email }}
+      email note found
+    </div>
     <div >
       <input type="password" class="input" placeholder="Password" formControlName="password">
+    </div>
+    <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+      {{ errors?.password }}
     </div>
     <div class="check">
         <input type="checkbox" class="checkbox" id="">
         <p>Mot de passe oublié?</p>
+    </div>
+    <div *ngIf="errors?.error" class="alert alert-danger mt-3">
+      {{ errors?.error }}
     </div>
     <div class="connexion">
       <button class="btn-login" type="submit" expand="block" [disabled]="!connexionform.valid" >Connexion</button>
@@ -70,18 +63,9 @@
   <!-- Register Form -->
   
   <form  [formGroup]="inscriptionForm" [ngClass]='registerForm' (ngSubmit)="onRegister()">
-    <div *ngIf="errors?.name" class="alert alert-danger mt-3">
-        {{ errors?.name }}
-      </div>
-      <div *ngIf="errors?.email" class="alert alert-danger mt-3">
-        {{ errors?.email }}
-      </div>
-      <div *ngIf="errors?.password" class="alert alert-danger mt-3">
-        {{ errors?.password }}
-      </div>
-      <div *ngIf="errors?.password_confirmation" class="alert alert-danger mt-3">
-        {{ errors?.password_confirmation }}
-      </div>
+    <div *ngIf="errors?.password_confirmation" class="alert alert-danger mt-3">
+      {{ errors?.password_confirmation }}
+    </div>
     <div class="close-form" (click)="close()">
         <img src="../../../assets/icones/close.png" alt="">
     </div>
@@ -95,12 +79,21 @@
     </div>
     <div>
         <input class="input" placeholder="Votre nom" formControlName="name">
-      </div>
+    </div>
+    <div *ngIf="errors?.name" class="alert alert-danger mt-3">
+      {{ errors?.name }}
+    </div>
     <div>
       <input class="input" placeholder="email" formControlName="email">
     </div>
-    <div >
+    <div *ngIf="errors?.email" class="alert alert-danger mt-3">
+      {{ errors?.email }}
+    </div>
+    <div>
       <input type="password" class="input" placeholder="Password" formControlName="password">
+    </div>
+    <div *ngIf="errors?.password" class="alert alert-danger mt-3">
+      {{ errors?.password }}
     </div>
     <div class="connexion">
       <button class="btn-login" type="submit" expand="block" [disabled]="!connexionform.valid" >Inscription</button>

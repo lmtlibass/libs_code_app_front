@@ -1,8 +1,13 @@
     <div class="section-cours" >
         <mat-card class="card" *ngFor="let Evenements of evenement">
             <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
-            <mat-card-title class="card-title">
-                {{Evenements.titre}}
+            <mat-card-title class="card-title d-flex flex-column justify-content-md-between">
+                <h6>
+                    {{Evenements.titre_evenement}}
+                </h6>
+                <h6 class="date">
+                    {{Evenements.date_evenement | date: 'dd/MM/yyyy'}}
+                </h6>
             </mat-card-title>
             <mat-card-content>
                 {{Evenements.description}}

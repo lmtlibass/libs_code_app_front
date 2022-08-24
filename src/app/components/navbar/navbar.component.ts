@@ -46,6 +46,7 @@ export class NavbarComponent implements OnInit {
   showRegister(){
     this.registerForm = 'registerFormVisible';
     
+    
   }
 
   close(){
