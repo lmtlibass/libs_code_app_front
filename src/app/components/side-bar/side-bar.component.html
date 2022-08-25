@@ -119,7 +119,12 @@
 </div>
 
 <div class="content">
-    <div class="section-cours" >
+    <app-back-arraw></app-back-arraw>
+    <div class="searchBar">
+        <input type="text" placeholder="Rechercher un cours">
+        <img src="../../assets/icones/search.png" alt="">
+    </div>
+    <div class="section-cours">
         <mat-card class="card"  *ngFor="let cours of coursByModules"
                 (click)="showCours(this.cours.id)"
                 routerLink="/cours"
@@ -129,7 +134,7 @@
                 {{cours.titre}}
             </mat-card-title>
             <mat-card-content>
-                {{cours.description}}
+                {{cours.description | slice: 00:60}}
             </mat-card-content>
         </mat-card>
     </div>
