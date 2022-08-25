@@ -8,27 +8,16 @@ import { StorageService } from '../services/storage.service';
   styleUrls: ['./all-cours.component.css']
 })
 export class AllCoursComponent implements OnInit {
-allCours: any;
+// allCours: any;
   constructor(
     private storageService: StorageService,
     private coursService: CoursService,
   ) { }
 
   ngOnInit(): void {
-    this.getAllCours();
+    // this.getAllCours();
   }
 
-  getAllCours(){
-    return this.coursService.getAllCours().subscribe(
-      (data: any) => {
-        console.log(data);
-        
-        this.allCours = data;
-      }
-    )
-  }
-  showCours(id: number){
-    return this.storageService.saveData('id_cours', id);
-  }
+  
 
 }

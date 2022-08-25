@@ -178,6 +178,15 @@
     transition: 1s;
 }
 
+.btn-invisible{
+    visibility: hidden;
+    display: none;
+}
+.btn-invisible{
+    position: absolute;
+    display: block;
+}
+
 @media screen and (max-width: 600px) {
     body {
       width: 100%;

@@ -46,6 +46,16 @@ export class CoursService {
   deleteCours(id: number){
     return this.http.delete(environment.api_url + 'cours/'+ id);
   }
+
+  //filtrer les cours par module
+  getCoursByModule(moduleId: number){
+    return this.http.get(environment.api_url + 'coursModule/' + moduleId);
+  }
+
+  //recuperer les modules
+  getModule(){
+    return this.http.get(environment.api_url + 'modules/');
+  }
   
   
 

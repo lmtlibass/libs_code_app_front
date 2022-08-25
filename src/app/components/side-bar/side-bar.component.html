@@ -1,4 +1,4 @@
-<div class="sidebar">
+<!-- <div class="sidebar">
     <div class="logo">
         <div class="icone-logo">
             <img src="../../../assets/icones/home.png" alt="">
@@ -109,4 +109,28 @@
             </a>
         </li>
     </ul>
+</div> -->
+
+<div class="sidebar">
+    <a class="active" href="#home">Accueil</a>
+    <div class="div" *ngFor="let module of modules">
+        <a (click)="getCoursByModule(this.module.id)">{{module.name}}</a>
+    </div>   
+</div>
+
+<div class="content">
+    <div class="section-cours" >
+        <mat-card class="card"  *ngFor="let cours of coursByModules"
+                (click)="showCours(this.cours.id)"
+                routerLink="/cours"
+        >
+            <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+            <mat-card-title class="card-title">
+                {{cours.titre}}
+            </mat-card-title>
+            <mat-card-content>
+                {{cours.description}}
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

@@ -33,5 +33,10 @@ export class AuthService {
       }),
     )
   }
+  //logOut
+  logOut(){
+    return this.http.post(`${environment.api_url}logout`, {}, { withCredentials: true }).subscribe();
+  }
+
 
 }
