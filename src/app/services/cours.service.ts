@@ -56,6 +56,11 @@ export class CoursService {
   getModule(){
     return this.http.get(environment.api_url + 'modules/');
   }
+
+  //recuperer cours par user
+  getcourByUser(user_id:  any){
+    return this.http.get(environment.api_url + 'cour/' + user_id)
+  }
   
   
 

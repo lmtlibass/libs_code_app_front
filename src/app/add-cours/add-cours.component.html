@@ -16,7 +16,7 @@
         <div class="titre-section">
             <input 
                 type="text" 
-                placeholder="Donner un titre a votre cours"
+                placeholder="titre du cours"
                 [(ngModel)]="cours.titre"
                 name="titre"
             >
@@ -24,8 +24,11 @@
             [(ngModel)]="cours.description"
                 name="description" 
                 type="text"  
-                placeholder="Donner une description"
+                placeholder="description du cours"
             >
+            <select name="nameModule" id="">
+                <option  *ngFor="let m of modules" value="{{m.name}}">{{m.name}}</option>
+            </select>
         </div>
         <div class="editeeur-section">
             <!-- <ckeditor

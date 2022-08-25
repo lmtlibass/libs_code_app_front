@@ -2,15 +2,16 @@ import  { Component, OnInit }  from '@angular/core';
 import  { Cours }              from '../models/cours';
 import  { CoursService }       from '../services/cours.service';
 import  { MatDialog }          from  '@angular/material/dialog' ;
-import  { DomSanitizer }       from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
+import { ModulesService } from '../services/modules.service';
 @Component({
   selector: 'app-add-cours',
   templateUrl: './add-cours.component.html',
   styleUrls: ['./add-cours.component.css']
 })
 export class AddCoursComponent implements OnInit {
-  
+  modules: any;
+  nameModule!: string;
   cours: Cours = {
     titre: '',
     contenu: '',
@@ -24,18 +25,29 @@ export class AddCoursComponent implements OnInit {
   constructor(
     private coursService: CoursService,
     public dialog: MatDialog,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private module: ModulesService
     
   ) { }
 
   ngOnInit(): void {
+    this.getModule();
+  }
+
+  getModule(){
+    this.module.getModule().subscribe(
+      (res)=>{
+        console.log(res);
+        this.modules = res;   
+      }
+    )
   }
   
   save(){
     this.cours.titre       = this.cours.titre;
     this.cours.contenu     = this.ckeditorContent;
     this.cours.statut      = 0;
-    this.cours.module_id   = 1;
+    this.cours.module_id   = this.nameModule;
     this.cours.description = this.cours.description;
     this.cours.user_id     = this.cours.user_id;
    

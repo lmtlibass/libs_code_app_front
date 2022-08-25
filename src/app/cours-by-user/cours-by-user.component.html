@@ -1,0 +1,13 @@
+<div class="section-cours" >
+    <mat-card class="card" *ngFor="let courdesc of cours" 
+            (click)="showCours(this.courdesc.id)" >
+        <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+        <mat-card-title class="card-title">
+            {{courdesc.titre}}
+        </mat-card-title>
+        <mat-card-content class="card-content">
+            {{courdesc.description | slice:0:70}}
+        </mat-card-content>
+    </mat-card>
+</div>
+   

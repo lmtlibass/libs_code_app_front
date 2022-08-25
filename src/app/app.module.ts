@@ -38,6 +38,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { ListeInscritComponent } from './liste-inscrit/liste-inscrit.component';
 import { EventsByUserComponent } from './events-by-user/events-by-user.component';
+import { CoursByUserComponent } from './cours-by-user/cours-by-user.component';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { EventsByUserComponent } from './events-by-user/events-by-user.component
     DetailCoursComponent,
     ListeInscritComponent,
     EventsByUserComponent,
+    CoursByUserComponent,
   ],
   imports: [
     BrowserModule,

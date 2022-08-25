@@ -18,6 +18,7 @@ import { AdminUserGuard } from './guards/admin-user.guard';
 import { RoleUserGuard } from './guards/role-user.guard';
 import { ListeInscritComponent } from './liste-inscrit/liste-inscrit.component';
 import { EventsByUserComponent } from './events-by-user/events-by-user.component';
+import { CoursByUserComponent } from './cours-by-user/cours-by-user.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'currentEvents', component: EventsByUserComponent,
     canActivate: [RoleUserGuard],
+  },
+  {
+    path: 'currentCours', component: CoursByUserComponent,
+    canActivate: [HasRoleGuard],
   },
   //admin
   { 
