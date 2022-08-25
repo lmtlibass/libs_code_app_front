@@ -1,0 +1,21 @@
+<div class="section-cours" >
+    <mat-card class="card" 
+        *ngFor="let e of event"
+        (click)="getidEvents(this.e.id)"
+        routerLink="/listeInscrit"
+    >
+        <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
+        <mat-card-title class="card-title d-flex flex-column justify-content-md-between">
+            <h6>
+                {{e.titre_evenement}}
+            </h6>
+            <h6 class="date">
+                {{e.date_evenement | date: 'dd/MM/yyyy'}}
+            </h6>
+        </mat-card-title>
+        <mat-card-content>
+            {{e.description | slice:0:70}}
+        </mat-card-content>
+    </mat-card>
+</div>
+

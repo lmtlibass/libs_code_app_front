@@ -36,6 +36,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { ListeInscritComponent } from './liste-inscrit/liste-inscrit.component';
+import { EventsByUserComponent } from './events-by-user/events-by-user.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     ListeUserComponent,
     SidebarAdminComponent,
     DetailCoursComponent,
+    ListeInscritComponent,
+    EventsByUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,8 @@ import { DetailCoursComponent } from './admin/detail-cours/detail-cours.componen
 import { HasRoleGuard } from './guards/has-role.guard';
 import { AdminUserGuard } from './guards/admin-user.guard';
 import { RoleUserGuard } from './guards/role-user.guard';
+import { ListeInscritComponent } from './liste-inscrit/liste-inscrit.component';
+import { EventsByUserComponent } from './events-by-user/events-by-user.component';
 
 
 const routes: Routes = [
@@ -44,10 +46,19 @@ const routes: Routes = [
     path: 'espaceuser', component: EspaceUserComponent,
     canActivate: [RoleUserGuard],
   },
+  {
+    path: 'listeInscrit', component: ListeInscritComponent,
+    canActivate: [RoleUserGuard],
+
+  },
   { 
     path: 'addcours', component: AddCoursComponent,
     canActivate: [HasRoleGuard],
   
+  },
+  {
+    path: 'currentEvents', component: EventsByUserComponent,
+    canActivate: [RoleUserGuard],
   },
   //admin
   { 

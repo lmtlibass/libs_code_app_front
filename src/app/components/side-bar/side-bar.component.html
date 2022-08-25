@@ -112,20 +112,34 @@
 </div> -->
 
 <div class="sidebar">
-    <a class="active" href="#home">Accueil</a>
+    <img src="../../../assets/images/logs.png" class="logo" alt="">
+    <a (click)="showall()">Tous</a>
     <div class="div" *ngFor="let module of modules">
         <a (click)="getCoursByModule(this.module.id)">{{module.name}}</a>
     </div>   
 </div>
 
 <div class="content">
-    <app-back-arraw></app-back-arraw>
+    <div class="rows"  routerLink="**" >
+        <span 
+            class="iconify" 
+            data-icon="bi:arrow-down-circle" 
+            style="color: white;" 
+            data-width="24" 
+            data-height="24" 
+            data-rotate="90deg"
+        ></span>
+        <div class="h4" style="text-align: center; margin: 0 auto;">
+            Liste des Cours
+        </div>
+    </div>
     <div class="searchBar">
         <input type="text" placeholder="Rechercher un cours">
         <img src="../../assets/icones/search.png" alt="">
     </div>
-    <div class="section-cours">
-        <mat-card class="card"  *ngFor="let cours of coursByModules"
+    <!-- -----------Cours By Module------------- -->
+    <div class="section-cours" [ngClass]="filtre">
+     <mat-card class="card w-25"  *ngFor="let cours of coursByModules"
                 (click)="showCours(this.cours.id)"
                 routerLink="/cours"
         >
@@ -137,5 +151,11 @@
                 {{cours.description | slice: 00:60}}
             </mat-card-content>
         </mat-card>
+       
+
+    </div>
+    <!-- ---------------------All Cours ---------------------->
+    <div class="section-cours w-100" [ngClass]="all">
+       <app-cards></app-cards>    
     </div>
 </div>

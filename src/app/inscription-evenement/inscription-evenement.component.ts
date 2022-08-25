@@ -4,6 +4,7 @@ import { StorageService } from '../services/storage.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ListeInscrits } from '../models/liste-inscrits';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -32,6 +33,7 @@ export class InscriptionEvenementComponent implements OnInit {
     private storageService: StorageService,
     private router: Router,
     private fb: FormBuilder,
+    private toastr: ToastrService,
 
   ) { 
     this.inscriptEventsForm = this.fb.group({
@@ -67,12 +69,14 @@ export class InscriptionEvenementComponent implements OnInit {
   console.log(this.liste);
   this.saveListeInscrit();
   this.inscriptEventsForm.reset();
+  this.toastr.success('Vous vous êtes inscrit à l\'évèneùent', 'Inscription réussi!')
  }
 
  saveListeInscrit(){
   return this.evenementsService.saveListeInscrit(this.liste).subscribe(
     (data: any) => {
       console.log(data);
+     
     });
  }
 

@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
-<div class="title-bar" routerLink="**">
+<div class="h3">
+    Liste des Evenements
+</div>
+<div class="row" routerLink="**">
     <span 
         class="iconify" 
         data-icon="bi:arrow-down-circle" 
@@ -8,23 +11,11 @@
         data-height="24" 
         data-rotate="90deg"
     ></span>
-    <h1>
+    <h1 class="h4">
        les Evenements
     </h1>
 </div>
 <div class="section-events" >
-    <mat-card   class="card"   
-                *ngFor="let Evenements of allEvenements"
-                (click)="showCours(this.Evenements.id)"
-                routerLink="/inscriptionevenement"
-    >
-        <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
-        <mat-card-title class="card-title">
-            {{Evenements.titre}}
-        </mat-card-title>
-        <mat-card-content>
-            {{Evenements.description}}
-        </mat-card-content>
-    </mat-card>
+    <app-evenement-card></app-evenement-card>
 </div>
 

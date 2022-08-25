@@ -14,17 +14,16 @@ export class AddCoursComponent implements OnInit {
   cours: Cours = {
     titre: '',
     contenu: '',
-    statut: 1,
+    statut: 0,
     module_id: undefined,
     description: '',
-    user_id: undefined
+    user_id: localStorage.getItem('auth_token')
   }
 
   ckeditorContent: string = '' ;
   constructor(
     private coursService: CoursService,
     public dialog: MatDialog,
-    private sanitizer: DomSanitizer,
     private toastr: ToastrService
     
   ) { }
@@ -38,9 +37,8 @@ export class AddCoursComponent implements OnInit {
     this.cours.statut      = 0;
     this.cours.module_id   = 1;
     this.cours.description = this.cours.description;
-    this.cours.user_id     = 1 
-    // this.cours.contenu     = this.sanitizer.bypassSecurityTrustHtml(this.cours.contenu );
-    
+    this.cours.user_id     = this.cours.user_id;
+   
     console.log(this.cours);
     
     this.addCours();

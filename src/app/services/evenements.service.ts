@@ -54,6 +54,11 @@ export class EvenementsService {
     return this.http.delete(environment.api_url + 'evenements/' + id);
   }
 
+  //recuperer l'evenement en fonction de l'utilisateur qui l'à publié
+  getEvenentByUser(userId: any){
+    return this.http.get(environment.api_url + 'evenement/'+ userId);
+  }
+
 
 
 }

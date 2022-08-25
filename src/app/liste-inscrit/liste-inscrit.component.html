@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="rows center" routerLink="/espaceuser">
+    <span 
+        class="iconify" 
+        data-icon="bi:arrow-down-circle" 
+        style="color: white;" 
+        data-width="24" 
+        data-height="24" 
+        data-rotate="90deg"
+    ></span>
+</div>
+
+<div class="table-section">
+    <div class="row d-flex flex-row float-right w-50 pt-2 pb-2">
+        <button class="btn w-25  bg-1 col-6">Supprimer</button>
+        <button class="btn w-25 ml-3 bg-2 col-6">Envoyer Mail</button>
+    </div>
+    <table class="table table-hover">
+        
+        <thead>
+            <tr>
+                <th scope="col">🙇</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Email</th>
+                <th scope="col">Attente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let inscrit of inscrits">
+                <th scope="row">{{inscrit.id}}</th>
+                <td>{{inscrit.prenom}}</td>
+                <td>{{inscrit.nom}}</td>
+                <td>{{inscrit.email}}</td>
+                <td>{{inscrit.attentes}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

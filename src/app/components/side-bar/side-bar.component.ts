@@ -8,14 +8,19 @@ import { CoursService } from 'src/app/services/cours.service';
 })
 export class SideBarComponent implements OnInit {
 
+  
   modules : any;
+  module : any;
   coursByModules: any;
   allCours: any;
+  filtre  = "hide-card"
+  all     = "show-card"
 
   constructor(private courService: CoursService) { }
 
   ngOnInit(): void {
     this.getModule();
+    this.getAllCours();
   }
 
   getModule(){
@@ -32,6 +37,8 @@ export class SideBarComponent implements OnInit {
       (res) => {
         this.coursByModules = res;
         console.log(res);
+        this.filtre = "show-card";
+        this.all    = "hide-card";
       }
     )
   }
@@ -40,10 +47,14 @@ export class SideBarComponent implements OnInit {
     return this.courService.getAllCours().subscribe(
       (data: any) => {
         console.log(data);
-        
         this.allCours = data;
       }
     )
+  }
+
+  showall(){
+    this.filtre     = "hide-card";
+        this.all    = "show-card";
   }
   showCours(id: any){
     return localStorage.setItem('id_cours', id);

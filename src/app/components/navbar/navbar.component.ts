@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthStateService } from 'src/app/services/auth-state.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -26,6 +27,7 @@ export class NavbarComponent implements OnInit {
     private token: TokenService,
     private authState: AuthStateService,
     private toastr: ToastrService,
+    private router: Router,
   ) { 
     this.connexionform = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -40,7 +42,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.islog(); 
   }
 
   ShowModalLogin(){
@@ -72,12 +74,23 @@ export class NavbarComponent implements OnInit {
         this.authState.setAuthState(true);
         this.connexionform.reset();
         this.loginForm =  'loginFormHidden';
-        this.btnConexion = 'btn-invisible';
-        this.btnDeconexion = 'btn-visible';
+        
       }
     );
   }
  
+  //
+  islog(){
+    const user = localStorage.getItem('auth_token');
+
+    if(!user){
+      this.btnConexion = 'btn-visible'
+      this.btnDeconexion = 'btn-invisible'
+    }
+    this.btnConexion = 'btn-invisible';
+    this.btnDeconexion = 'btn-visible';
+    }
+  
 
   //register
   onRegister(){
@@ -103,9 +116,11 @@ export class NavbarComponent implements OnInit {
   onLogout(){
     this.authService.logOut();
     this.toastr.show('Vous vous êtes déconnecté 💓')
-    localStorage.removeItem('role')
     this.btnConexion = 'btn-visible';
     this.btnDeconexion = 'btn-invisible';
+    localStorage.clear();
+    this.router.navigateByUrl('/');
+    
   }
 
 }
