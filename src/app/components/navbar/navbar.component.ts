@@ -69,11 +69,15 @@ export class NavbarComponent implements OnInit {
       },
       (error) => {
         this.errors = error.error;
+        this.errors.message === 'Unauthorized'
+        ?this.toastr.error('Mot de pass ou email incorecte', 'Erreur ⚠️')
+        :this.toastr.error(this.errors.message, 'Erreur ⚠️')
       },
       () => {
         this.authState.setAuthState(true);
         this.connexionform.reset();
         this.loginForm =  'loginFormHidden';
+        this.toastr.success('Vous vous êtes connecté', 'Réussi🌤️')
         
       }
     );

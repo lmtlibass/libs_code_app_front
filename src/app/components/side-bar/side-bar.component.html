@@ -139,7 +139,7 @@
     </div>
     <!-- -----------Cours By Module------------- -->
     <div class="section-cours" [ngClass]="filtre">
-     <mat-card class="card w-25"  *ngFor="let cours of coursByModules"
+        <mat-card class="card w-25"  *ngFor="let cours of coursByModules"
                 (click)="showCours(this.cours.id)"
                 routerLink="/cours"
         >

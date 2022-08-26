@@ -14,9 +14,9 @@ export class CommentaireService {
   ) { }
 
   getCommentaire(){
-    return this.http.get(environment.api_url + 'commentaire');
+    return this.http.get(environment.api_url + 'commentaires  ');
   }
   addCommentaire(commentaire: any): Observable<Commentaire[]> {
-    return this.http.post<Commentaire[]>(`${environment.api_url}/addCommentaire`, commentaire);
+    return this.http.post<Commentaire[]>(`${environment.api_url}commentaires`, commentaire);
   }
 }

@@ -8,6 +8,7 @@ import { CoursService } from '../services/cours.service';
 })
 export class CoursByUserComponent implements OnInit {
   cours: any;
+  
   constructor(
     private coursService: CoursService
   ) { }
@@ -30,5 +31,6 @@ export class CoursByUserComponent implements OnInit {
     console.log(idCours);
     
   }
+ 
 
 }

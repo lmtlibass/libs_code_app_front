@@ -40,8 +40,28 @@
             data-height="24"
         ></span>
     </div>
-    <div class="commentaire">
-        <input type="text" placeholder="commentaire">
+    <div class="commentaire" onsubmit="" >
+        <input type="text" placeholder="commentaire..." name="commentaire" [(ngModel)]="commentaires.commentaire">
+    </div>
+    <div class="mr-3">
+        <button class="btn text-light" 
+                style="background-color: #007878; cursor: pointer;"
+                (click)="addComment()"
+        >
+            Envoyer
+        </button>
     </div>
 </div>
-<app-footer></app-footer>
+<div class="h6 text-dark coment-section">
+    Commentaires
+</div>
+<hr class="">
+<div class="commentaires">
+    <ul *ngFor="let cm of coment"  class="w-75"> 
+        <li>
+            {{cm.commentaire}} 
+        </li>
+    </ul>
+</div>
+
+

@@ -1,6 +1,7 @@
 <div class="section-cours" >
     <mat-card class="card" *ngFor="let courdesc of cours" 
-            (click)="showCours(this.courdesc.id)" >
+            (click)="showCours(this.courdesc.id)" 
+            routerLink="/cours">
         <img mat-card-image src="../../../assets/images/phpimg.jpg" alt="">
         <mat-card-title class="card-title">
             {{courdesc.titre}}
